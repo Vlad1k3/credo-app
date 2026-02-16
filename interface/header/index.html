@@ -6,11 +6,15 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Privacy-first financial analytics for Credo Bank statements">
+      
       
       
       
         <link rel="prev" href="../dashboard/">
       
+      
+        <link rel="next" href="../../analytics/all-time/">
       
       
         
@@ -21,7 +25,7 @@
     
     
       
-        <title>Dashboard Header - Credo Statement Analyzer</title>
+        <title>Header & Controls - Credo Statement Analyzer</title>
       
     
     
@@ -42,8 +46,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
       
     
     
@@ -58,10 +62,12 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -70,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dashboard-header" class="md-skip">
+        <a href="#header-controls" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dashboard Header
+              Header & Controls
             
           </span>
         </div>
@@ -112,7 +118,33 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -183,7 +215,7 @@
   
     
   
-  Welcome to MkDocs
+  Home
 
       </a>
     </li>
@@ -195,36 +227,40 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../SUMMARY/" class="md-tabs__link">
-        
-  
-  
     
-  
-  Table of contents
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../getting-started/" class="md-tabs__link">
-        
-  
-  
     
+      <li class="md-tabs__item">
+        <a href="../../README.md" class="md-tabs__link">
+          
+  
   
   Getting Started
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../dashboard/" class="md-tabs__link">
+          
+  
+  
+  Interface
+
+        </a>
+      </li>
+    
   
 
       
@@ -252,17 +288,15 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../dashboard/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../analytics/formulas/" class="md-tabs__link">
           
   
   
-  Interface
+  Reference
 
         </a>
       </li>
@@ -317,7 +351,7 @@
   <span class="md-ellipsis">
     
   
-    Welcome to MkDocs
+    Home
   
 
     
@@ -336,36 +370,27 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../SUMMARY/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
     
-  
-    Table of contents
-  
-
     
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
+    
     
       
       
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../getting-started/" class="md-nav__link">
         
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -379,7 +404,301 @@
   
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../README.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Upload & Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interface
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Interface
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Header & Controls
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Header & Controls
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Controls
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#account-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Account Information
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#date-range-transaction-count" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Date Range &amp; Transaction Count
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#currency-toggle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Currency Toggle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#noise-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Noise Filter
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -396,13 +715,17 @@
     
       
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -448,63 +771,7 @@
   <span class="md-ellipsis">
     
   
-    All Time Stats
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/custom/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Custom Analysis
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../analytics/formulas/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Formulas &amp; Calculations
+    All Time View
   
 
     
@@ -546,6 +813,118 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/custom/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom Range
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/insights/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Financial Insights
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/categories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Categories
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/exchange-rates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exchange Rates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -557,36 +936,35 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
       
+        
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
   <span class="md-ellipsis">
     
   
-    Interface
+    Reference
   
 
     
@@ -597,12 +975,12 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
   
-    Interface
+    Reference
   
 
           </label>
@@ -615,14 +993,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../dashboard/" class="md-nav__link">
+      <a href="../../analytics/formulas/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Main Dashboard
+    Formulas & Calculations
   
 
     
@@ -640,44 +1018,17 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Dashboard Header
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../architecture/data-model/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Dashboard Header
+    Data Model
   
 
     
@@ -686,48 +1037,34 @@
   
 
       </a>
-      
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+              
+            
+              
+                
   
   
   
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/parsing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
     
   
+    Parsing Pipeline
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#controls-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Controls Overview
-      
-    </span>
-  </a>
+
+    
+  </span>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#date-range-transaction-count" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Date Range &amp; Transaction Count
-      
-    </span>
-  </a>
   
-</li>
-      
-    </ul>
-  
-</nav>
-      
+
+      </a>
     </li>
   
 
@@ -767,10 +1104,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#controls-overview" class="md-nav__link">
+  <a href="#controls" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Controls Overview
+        Controls
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#account-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Account Information
       
     </span>
   </a>
@@ -782,6 +1130,28 @@
     <span class="md-ellipsis">
       
         Date Range &amp; Transaction Count
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#currency-toggle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Currency Toggle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#noise-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Noise Filter
       
     </span>
   </a>
@@ -805,55 +1175,77 @@
 
 
 
-<h1 id="dashboard-header">Dashboard Header</h1>
-<p>The header is your control center for Credo Analytics. It provides quick access to global settings and privacy tools.</p>
-<h2 id="controls-overview">Controls Overview</h2>
+<h1 id="header-controls">Header &amp; Controls<a class="headerlink" href="#header-controls" title="Permanent link">&para;</a></h1>
+<p>The header is the control center of the dashboard, providing access to global settings, file management, and data filtering.</p>
+<h2 id="controls">Controls<a class="headerlink" href="#controls" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Icon/Button</th>
-<th style="text-align: left;">Name</th>
-<th style="text-align: left;">Function</th>
+<th>Control</th>
+<th>Label</th>
+<th>Function</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>Theme Toggle</strong></td>
-<td style="text-align: left;">Light/Dark Mode</td>
-<td style="text-align: left;">Switches the interface between a bright, clean look and a dark, eye-friendly theme.</td>
+<td><strong>Theme Toggle</strong></td>
+<td><code>🌙</code> / <code>☀️</code></td>
+<td>Switches between light and dark themes. Saved in <code>localStorage</code>.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Language</strong></td>
-<td style="text-align: left;">English/Russian</td>
-<td style="text-align: left;">Toggles the interface language.</td>
+<td><strong>Language</strong></td>
+<td><code>RU</code> / <code>EN</code></td>
+<td>Toggles the interface language between English and Russian.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Eye Icon</strong></td>
-<td style="text-align: left;">Privacy Mode</td>
-<td style="text-align: left;">Blurs all sensitive monetary values on the screen. Useful when sharing your screen or working in public.</td>
+<td><strong>Noise Filter</strong></td>
+<td>Filter icon</td>
+<td>Hides internal transfers (self-transfers between own accounts and currency exchanges) to show only real income/expense. Active by default.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Filter Icon</strong></td>
-<td style="text-align: left;">Noise Filter</td>
-<td style="text-align: left;">Hides internal transfers (e.g., self-transfers between your own accounts) to show only "real" spending and income.</td>
+<td><strong>+ Add Files</strong></td>
+<td><code>+ Add Files</code></td>
+<td>Upload additional statement files to merge with existing data. New transactions are deduplicated automatically.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Add Files</strong></td>
-<td style="text-align: left;">Add More Data</td>
-<td style="text-align: left;">Allows you to upload additional statements to merge with your current data.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Trash Icon</strong></td>
-<td style="text-align: left;">Reset Data</td>
-<td style="text-align: left;">Completely clears all transaction data from the browser and returns you to the welcome screen.</td>
+<td><strong>New File</strong></td>
+<td><code>New File</code></td>
+<td>Clears all transaction data from the browser and returns to the upload screen.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="date-range-transaction-count">Date Range &amp; Transaction Count</h2>
-<p>In the top left, under the title, you will see a summary of your loaded data:
-* <strong>Date Range</strong>: The start and end dates of all transactions currently loaded.
-* <strong>Transaction Count</strong>: The total number of transactions being analyzed.</p>
-<p>This quick summary helps you verify that you've uploaded all the necessary files for the period you want to analyze.</p>
+<h2 id="account-information">Account Information<a class="headerlink" href="#account-information" title="Permanent link">&para;</a></h2>
+<p>Below the title, a summary line shows:</p>
+<ul>
+<li><strong>Account Holder</strong> — name from the first uploaded file's account info</li>
+<li><strong>Account Numbers</strong> — if multiple accounts are loaded, shows count (e.g., "3 accounts")</li>
+<li><strong>Currencies</strong> — grouped by currency with counts (e.g., "2x GEL + USD")</li>
+</ul>
+<p>Example: <code>JOHN DOE · 3 accounts · 2x GEL + USD</code></p>
+<h2 id="date-range-transaction-count">Date Range &amp; Transaction Count<a class="headerlink" href="#date-range-transaction-count" title="Permanent link">&para;</a></h2>
+<p>The second line shows:</p>
+<ul>
+<li><strong>Date Range</strong> — start and end dates of all loaded transactions (format: <code>DD.MM.YYYY</code>)</li>
+<li><strong>Transaction Count</strong> — total number of transactions being analyzed</li>
+</ul>
+<p>Example: <code>01.01.2024 — 31.12.2024 · 1,247 transactions</code></p>
+<h2 id="currency-toggle">Currency Toggle<a class="headerlink" href="#currency-toggle" title="Permanent link">&para;</a></h2>
+<p>Appears only when multiple account currencies are detected. Click a currency code (e.g., <strong>USD</strong>, <strong>GEL</strong>) to convert all charts, summaries, and totals to that currency using historical exchange rates.</p>
+<div class="admonition info">
+<p class="admonition-title">How conversion works</p>
+<p>When you switch to a non-primary currency, the app fetches historical rates from the National Bank of Georgia for every unique transaction date, then converts each transaction's debit, credit, balance, and amount fields individually. See <a href="../../analytics/exchange-rates/">Exchange Rates</a> for details.</p>
+</div>
+<h2 id="noise-filter">Noise Filter<a class="headerlink" href="#noise-filter" title="Permanent link">&para;</a></h2>
+<p>When active (default), the noise filter hides two categories of transactions:</p>
+<ol>
+<li><strong>Self Transfers</strong> — money moved between your own Credo accounts (matched by <code>საკუთარ ანგარიშებს</code> pattern)</li>
+<li><strong>Currency Exchanges</strong> — buying/selling currency within your accounts (matched by <code>კონვერტაცია</code>, <code>Exchange</code>, etc.)</li>
+</ol>
+<p>This prevents internal money movements from inflating your income and expense totals. For example, transferring 1000 GEL from checking to savings would otherwise appear as both a 1000 GEL expense and 1000 GEL income.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Toggle the filter off if you want to see the complete transaction history including internal movements.</p>
+</div>
 
 
 
@@ -871,8 +1263,16 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -903,10 +1303,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

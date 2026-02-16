@@ -6,13 +6,15 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Privacy-first financial analytics for Credo Bank statements">
       
       
       
-        <link rel="prev" href="../../getting-started/">
+      
+        <link rel="prev" href="../../interface/header/">
       
       
-        <link rel="next" href="../custom/">
+        <link rel="next" href="../periods/">
       
       
         
@@ -23,7 +25,7 @@
     
     
       
-        <title>All Time Stats - Credo Statement Analyzer</title>
+        <title>All Time View - Credo Statement Analyzer</title>
       
     
     
@@ -44,8 +46,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
       
     
     
@@ -60,10 +62,12 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -72,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#all-time-stats" class="md-skip">
+        <a href="#all-time-view" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              All Time Stats
+              All Time View
             
           </span>
         </div>
@@ -114,7 +118,33 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -185,7 +215,7 @@
   
     
   
-  Welcome to MkDocs
+  Home
 
       </a>
     </li>
@@ -197,36 +227,38 @@
   
   
   
-    <li class="md-tabs__item">
-      <a href="../../SUMMARY/" class="md-tabs__link">
-        
-  
-  
     
-  
-  Table of contents
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../getting-started/" class="md-tabs__link">
-        
-  
-  
     
+      <li class="md-tabs__item">
+        <a href="../../README.md" class="md-tabs__link">
+          
+  
   
   Getting Started
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../interface/dashboard/" class="md-tabs__link">
+          
+  
+  
+  Interface
+
+        </a>
+      </li>
+    
   
 
       
@@ -260,11 +292,11 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../interface/dashboard/" class="md-tabs__link">
+        <a href="../formulas/" class="md-tabs__link">
           
   
   
-  Interface
+  Reference
 
         </a>
       </li>
@@ -319,7 +351,7 @@
   <span class="md-ellipsis">
     
   
-    Welcome to MkDocs
+    Home
   
 
     
@@ -338,36 +370,27 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../SUMMARY/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
     
-  
-    Table of contents
-  
-
     
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
+    
     
       
       
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../getting-started/" class="md-nav__link">
         
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -381,7 +404,196 @@
   
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../README.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Upload & Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interface
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Interface
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interface/dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interface/header/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Header & Controls
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -402,6 +614,8 @@
         
         
       
+      
+        
       
     
     
@@ -464,7 +678,7 @@
   <span class="md-ellipsis">
     
   
-    All Time Stats
+    All Time View
   
 
     
@@ -482,7 +696,7 @@
   <span class="md-ellipsis">
     
   
-    All Time Stats
+    All Time View
   
 
     
@@ -508,40 +722,39 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#key-metrics" class="md-nav__link">
+  <a href="#summary-cards" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Key Metrics
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Key Metrics">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#total-income-expense" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Total Income &amp; Expense
+        Summary Cards
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#net-result" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#monthly-bar-chart" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Net Result
+        Monthly Bar Chart
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
+  <a href="#balance-timeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Balance Timeline
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#category-breakdown" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -551,17 +764,45 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#top-merchants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Top Merchants
+      
+    </span>
+  </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#usage-tips" class="md-nav__link">
+  <a href="#savings-rate-chart" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Usage Tips
+        Savings Rate Chart
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#financial-insights" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Financial Insights
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transaction-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transaction Table
       
     </span>
   </a>
@@ -572,62 +813,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../custom/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Custom Analysis
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../formulas/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Formulas &amp; Calculations
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -661,63 +846,6 @@
 
               
             
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Interface
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Interface
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
               
                 
   
@@ -725,14 +853,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../interface/dashboard/" class="md-nav__link">
+      <a href="../custom/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Main Dashboard
+    Custom Range
   
 
     
@@ -753,14 +881,215 @@
   
   
     <li class="md-nav__item">
-      <a href="../../interface/header/" class="md-nav__link">
+      <a href="../insights/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Dashboard Header
+    Financial Insights
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../categories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Categories
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exchange-rates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exchange Rates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../formulas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formulas & Calculations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/data-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/parsing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parsing Pipeline
   
 
     
@@ -808,40 +1137,39 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#key-metrics" class="md-nav__link">
+  <a href="#summary-cards" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Key Metrics
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Key Metrics">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#total-income-expense" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Total Income &amp; Expense
+        Summary Cards
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#net-result" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#monthly-bar-chart" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Net Result
+        Monthly Bar Chart
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
+  <a href="#balance-timeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Balance Timeline
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#category-breakdown" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -851,17 +1179,45 @@
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#top-merchants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Top Merchants
+      
+    </span>
+  </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#usage-tips" class="md-nav__link">
+  <a href="#savings-rate-chart" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Usage Tips
+        Savings Rate Chart
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#financial-insights" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Financial Insights
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transaction-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Transaction Table
       
     </span>
   </a>
@@ -885,24 +1241,122 @@
 
 
 
-<h1 id="all-time-stats">All Time Stats</h1>
-<p>The <strong>All Time</strong> view is the default landing page after uploading your files. It aggregates every single transaction to show your complete financial picture.</p>
-<h2 id="key-metrics">Key Metrics</h2>
-<h3 id="total-income-expense">Total Income &amp; Expense</h3>
-<p>The absolute sum of all money coming in (credits) versus money going out (debits). This gives you the scale of your financial activity over the entire period.</p>
-<h3 id="net-result">Net Result</h3>
-<p>The difference between <strong>Total Income</strong> and <strong>Total Expense</strong>.
-* <strong>Positive (Green)</strong>: You earned more than you spent.
-* <strong>Negative (Red)</strong>: You spent more than you earned.</p>
-<h3 id="category-breakdown">Category Breakdown</h3>
-<p>A visual Doughnut Chart showing where your money went.
-* <strong>Interactive</strong>: Hover over (or tap) a slice to see the exact amount and percentage.
-* <strong>Click to Drill Down</strong>: Clicking a category reveals a list of specific merchants/transactions within that category.</p>
-<h2 id="usage-tips">Usage Tips</h2>
-<p>Use this view to answer big-picture questions:
-* "What is my biggest expense category overall?"
-* "Have I been net positive over the last few years?"
-* "How much has my total income been since I opened these accounts?"</p>
+<h1 id="all-time-view">All Time View<a class="headerlink" href="#all-time-view" title="Permanent link">&para;</a></h1>
+<p>The <strong>All Time</strong> tab is the default landing page. It aggregates every loaded transaction to show the complete financial picture.</p>
+<h2 id="summary-cards">Summary Cards<a class="headerlink" href="#summary-cards" title="Permanent link">&para;</a></h2>
+<p>Six metric cards are displayed at the top:</p>
+<table>
+<thead>
+<tr>
+<th>Card</th>
+<th>Formula</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Total Income</strong></td>
+<td><span class="arithmatex">\(\sum \text{credit}_i\)</span></td>
+<td>Sum of all credit (incoming) amounts</td>
+</tr>
+<tr>
+<td><strong>Total Expense</strong></td>
+<td><span class="arithmatex">\(\sum \text{debit}_i\)</span></td>
+<td>Sum of all debit (outgoing) amounts</td>
+</tr>
+<tr>
+<td><strong>Net Result</strong></td>
+<td><span class="arithmatex">\(\text{Income} - \text{Expense}\)</span></td>
+<td>Overall balance change. Green if positive, red if negative</td>
+</tr>
+<tr>
+<td><strong>Avg. Daily Expense</strong></td>
+<td><span class="arithmatex">\(\frac{\text{Total Expense}}{\text{Unique Days}}\)</span></td>
+<td>Average spending per day that had transactions</td>
+</tr>
+<tr>
+<td><strong>Avg. Monthly Expense</strong></td>
+<td><span class="arithmatex">\(\frac{\text{Total Expense}}{\text{Unique Months}}\)</span></td>
+<td>Average spending per month</td>
+</tr>
+<tr>
+<td><strong>Current Balance</strong></td>
+<td>Last transaction's <code>balance</code> field</td>
+<td>The closing balance from the most recent transaction</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Balance reconciliation</p>
+<p>If account info includes a <strong>Closing Balance</strong> (from XLSX/PDF headers), the app uses that as the authoritative balance. If the calculated net differs from the closing balance, a hidden "adjustment" term reconciles them — this accounts for transactions that may fall outside the exported date range.</p>
+</div>
+<h2 id="monthly-bar-chart">Monthly Bar Chart<a class="headerlink" href="#monthly-bar-chart" title="Permanent link">&para;</a></h2>
+<p>A stacked/grouped bar chart showing <strong>Income</strong> (green) and <strong>Expense</strong> (red) per calendar month.</p>
+<ul>
+<li>X-axis: months (e.g., "Jan", "Feb", ...)</li>
+<li>Y-axis: amount in display currency</li>
+<li>Hovering shows a tooltip with exact values</li>
+<li>Months are derived by grouping transactions on <code>date.substring(0, 7)</code> (format <code>YYYY/MM</code>)</li>
+</ul>
+<h2 id="balance-timeline">Balance Timeline<a class="headerlink" href="#balance-timeline" title="Permanent link">&para;</a></h2>
+<p>A line chart showing the <strong>combined account balance</strong> over time.</p>
+<p>How it's built:</p>
+<ol>
+<li>Transactions are grouped by account (original currency)</li>
+<li>For each unique date, the balance for each account is the <strong>last known balance on or before that date</strong> (found via binary search)</li>
+<li>All account balances for the same date are summed</li>
+<li>The result is a smooth timeline that never goes negative (it reflects actual bank balances, not running totals)</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Multi-account balances</p>
+<p>If you have GEL and USD accounts and are viewing in GEL, each USD balance is converted to GEL at the rate on that specific date before summing.</p>
+</div>
+<h2 id="category-breakdown">Category Breakdown<a class="headerlink" href="#category-breakdown" title="Permanent link">&para;</a></h2>
+<p>A doughnut chart showing expense distribution across categories, paired with a ranked list.</p>
+<ul>
+<li>Only <strong>debit transactions</strong> (expenses) are included</li>
+<li>Each transaction is categorized by matching its <code>operation + description</code> against 91 regex rules (see <a href="../categories/">Categories</a>)</li>
+<li>Categories are sorted by total descending</li>
+<li>Clicking a category in the chart or list filters the transaction table below</li>
+<li>Expanding a category reveals a merchant sub-list sorted by spend</li>
+</ul>
+<h2 id="top-merchants">Top Merchants<a class="headerlink" href="#top-merchants" title="Permanent link">&para;</a></h2>
+<p>A ranked bar list showing the top 10 merchants by total spend. Merchant names are extracted from the transaction description using pattern matching:</p>
+<ul>
+<li>Card payments: <code>გადახდა - MERCHANT_NAME 18.39 GEL</code> → <code>MERCHANT_NAME</code></li>
+<li>Utility payments: <code>გაზი - სოკარ ჯორჯია</code> → <code>სოკარ ჯორჯია</code></li>
+<li>Fallback: beneficiary name or operation type</li>
+</ul>
+<h2 id="savings-rate-chart">Savings Rate Chart<a class="headerlink" href="#savings-rate-chart" title="Permanent link">&para;</a></h2>
+<p>A bar chart showing the <strong>monthly savings rate</strong> — the percentage of income that was saved each month.</p>
+<div class="arithmatex">\[
+\text{Savings Rate}_m = \frac{\text{Income}_m - \text{Expense}_m}{\text{Income}_m} \times 100\%
+\]</div>
+<ul>
+<li>Green bars indicate positive savings (saved money)</li>
+<li>Red bars indicate negative savings (spent more than earned)</li>
+<li>Below the chart, a scrollable list shows each month's exact rate, income, and expense values</li>
+</ul>
+<p>See <a href="../formulas/#savings-rate">Formulas</a> for the complete formula.</p>
+<h2 id="financial-insights">Financial Insights<a class="headerlink" href="#financial-insights" title="Permanent link">&para;</a></h2>
+<p>Five analytical cards available only in the All Time view:</p>
+<ol>
+<li><strong>Financial Stability Score</strong> — composite 0–100 score based on income stability, expense stability, and savings consistency</li>
+<li><strong>Day-of-Week Patterns</strong> — bar chart showing average daily expense per weekday (Mon–Sun)</li>
+<li><strong>Vampire Expenses</strong> — small recurring charges (&lt; 15 GEL) that appear 3+ times</li>
+<li><strong>Category Trends</strong> — categories with the biggest change between the first half and second half of your data</li>
+<li><strong>Living Standard Progress</strong> — comparison of average income, expense, and savings between the first and second halves</li>
+</ol>
+<p>See <a href="../insights/">Financial Insights</a> for detailed formulas and methodology.</p>
+<h2 id="transaction-table">Transaction Table<a class="headerlink" href="#transaction-table" title="Permanent link">&para;</a></h2>
+<p>A paginated, searchable, sortable table of all transactions with:</p>
+<ul>
+<li><strong>Search</strong> — filters by operation, description, beneficiary name (debounced at 200ms)</li>
+<li><strong>Type filter</strong> — All / Income / Expense buttons</li>
+<li><strong>Sort</strong> — click column headers to sort by date, amount, or balance</li>
+<li><strong>Detail modal</strong> — click any row to see full transaction details including category, beneficiary account, etc.</li>
+<li><strong>Category/merchant filter</strong> — clicking a category or merchant in the breakdown above filters the table</li>
+</ul>
 
 
 
@@ -920,8 +1374,16 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -952,10 +1414,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

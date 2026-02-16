@@ -6,13 +6,15 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Privacy-first financial analytics for Credo Bank statements">
       
       
       
-        <link rel="prev" href="../SUMMARY/">
+      
+        <link rel="prev" href="..">
       
       
-        <link rel="next" href="../analytics/all-time/">
+        <link rel="next" href="../interface/dashboard/">
       
       
         
@@ -23,7 +25,7 @@
     
     
       
-        <title>Getting Started - Credo Statement Analyzer</title>
+        <title>Upload & Setup - Credo Statement Analyzer</title>
       
     
     
@@ -44,8 +46,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
       
     
     
@@ -60,10 +62,12 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -72,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#getting-started" class="md-skip">
+        <a href="#upload-setup" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Getting Started
+              Upload & Setup
             
           </span>
         </div>
@@ -114,7 +118,33 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -185,26 +215,7 @@
   
     
   
-  Welcome to MkDocs
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../SUMMARY/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Table of contents
+  Home
 
       </a>
     </li>
@@ -218,17 +229,38 @@
     
   
   
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
-        
-  
-  
     
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../README.md" class="md-tabs__link">
+          
+  
   
   Getting Started
 
-      </a>
-    </li>
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../interface/dashboard/" class="md-tabs__link">
+          
+  
+  
+  Interface
+
+        </a>
+      </li>
+    
   
 
       
@@ -260,11 +292,11 @@
     
     
       <li class="md-tabs__item">
-        <a href="../interface/dashboard/" class="md-tabs__link">
+        <a href="../analytics/formulas/" class="md-tabs__link">
           
   
   
-  Interface
+  Reference
 
         </a>
       </li>
@@ -319,7 +351,7 @@
   <span class="md-ellipsis">
     
   
-    Welcome to MkDocs
+    Home
   
 
     
@@ -336,17 +368,74 @@
       
   
   
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
-      <a href="../SUMMARY/" class="md-nav__link">
+      <a href="../README.md" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Table of contents
+    Introduction
   
 
     
@@ -358,9 +447,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
     
@@ -382,7 +472,7 @@
   <span class="md-ellipsis">
     
   
-    Getting Started
+    Upload & Setup
   
 
     
@@ -400,7 +490,7 @@
   <span class="md-ellipsis">
     
   
-    Getting Started
+    Upload & Setup
   
 
     
@@ -426,13 +516,52 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-to-upload" class="md-nav__link">
+  <a href="#supported-file-formats" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What to Upload
+        Supported File Formats
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Supported File Formats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xlsx-excel-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XLSX (Excel) — Recommended
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PDF
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CSV
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -448,58 +577,60 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#privacy-security" class="md-nav__link">
+  <a href="#currency-detection" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Privacy &amp; Security
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Privacy &amp; Security">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#how-it-works" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How it works
+        Currency Detection
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#how-to-verify" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#deduplication" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How to Verify
+        Deduplication
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#clearing-data" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#data-storage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Clearing Data
+        Data Storage
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#offline-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Offline Usage
+      
+    </span>
+  </a>
   
 </li>
       
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -517,13 +648,134 @@
     
       
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interface
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Interface
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interface/dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interface/header/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Header & Controls
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -569,63 +821,7 @@
   <span class="md-ellipsis">
     
   
-    All Time Stats
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../analytics/custom/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Custom Analysis
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../analytics/formulas/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Formulas &amp; Calculations
+    All Time View
   
 
     
@@ -667,63 +863,6 @@
 
               
             
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Interface
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Interface
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
               
                 
   
@@ -731,14 +870,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../interface/dashboard/" class="md-nav__link">
+      <a href="../analytics/custom/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Main Dashboard
+    Custom Range
   
 
     
@@ -759,14 +898,215 @@
   
   
     <li class="md-nav__item">
-      <a href="../interface/header/" class="md-nav__link">
+      <a href="../analytics/insights/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Dashboard Header
+    Financial Insights
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analytics/categories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Categories
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analytics/exchange-rates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exchange Rates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../analytics/formulas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formulas & Calculations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/data-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/parsing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parsing Pipeline
   
 
     
@@ -814,13 +1154,52 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-to-upload" class="md-nav__link">
+  <a href="#supported-file-formats" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What to Upload
+        Supported File Formats
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Supported File Formats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xlsx-excel-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XLSX (Excel) — Recommended
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PDF
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CSV
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -836,52 +1215,46 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#privacy-security" class="md-nav__link">
+  <a href="#currency-detection" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Privacy &amp; Security
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Privacy &amp; Security">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#how-it-works" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How it works
+        Currency Detection
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#how-to-verify" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#deduplication" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How to Verify
+        Deduplication
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#clearing-data" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#data-storage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Clearing Data
+        Data Storage
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#offline-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Offline Usage
+      
+    </span>
+  </a>
   
 </li>
       
@@ -902,41 +1275,111 @@
 
 
 
-<h1 id="getting-started">Getting Started</h1>
-<h2 id="what-to-upload">What to Upload</h2>
-<p>Credo Analytics supports the following file formats, which you can export directly from your Credo Bank account:</p>
+<h1 id="upload-setup">Upload &amp; Setup<a class="headerlink" href="#upload-setup" title="Permanent link">&para;</a></h1>
+<h2 id="supported-file-formats">Supported File Formats<a class="headerlink" href="#supported-file-formats" title="Permanent link">&para;</a></h2>
+<p>Credo Statement Analyzer accepts three file types exported from Credo Bank:</p>
+<h3 id="xlsx-excel-recommended">XLSX (Excel) — Recommended<a class="headerlink" href="#xlsx-excel-recommended" title="Permanent link">&para;</a></h3>
+<p>The richest format. The parser looks for two sheets:</p>
 <ul>
-<li><strong>.XLSX (Excel)</strong>: Recommended for detailed transaction data.</li>
-<li><strong>.PDF</strong>: Bank statements in PDF format.</li>
-<li><strong>.CSV</strong>: Comma-separated values (if available).</li>
+<li><strong>Account Details</strong> (or "დეტალები") — account holder, account number, currency, opening/closing balance</li>
+<li><strong>Transactions</strong> (or "ტრანზაქცი") — the transaction table</li>
 </ul>
-<blockquote>
-<p>[!TIP]
-You can upload <strong>multiple files at once</strong>. Whether you have monthly statements for the past year or multiple accounts, drag them all into the upload zone together. The application will automatically merge and deduplicate transactions.</p>
-</blockquote>
-<h2 id="how-to-upload">How to Upload</h2>
+<p>If these sheet names aren't found, the parser falls back to the last sheet in the workbook.</p>
+<h3 id="pdf">PDF<a class="headerlink" href="#pdf" title="Permanent link">&para;</a></h3>
+<p>Two PDF formats are supported:</p>
 <ol>
-<li><strong>Locate your files</strong>: Ensure you have your exported bank statements ready on your device.</li>
-<li><strong>Drag &amp; Drop</strong>: Simply drag the file(s) from your file explorer and drop them onto the upload area.</li>
-<li><strong>Or Click to Browse</strong>: Click the upload button to open your system's file picker and select the files you wish to analyze.</li>
+<li><strong>Full Account Statement</strong> — multi-page table with columns: Date, Operation, Debit, Credit, Balance, Description, Beneficiary. Detected by the presence of "Account Statement" or "ამონაწერი" in the header.</li>
+<li><strong>Payment Order Receipt</strong> — single-transaction receipt. The parser extracts date, amount, operation details, and receiver/sender info.</li>
 </ol>
-<p>The application will instantly parse the files and present your dashboard.</p>
-<h2 id="privacy-security">Privacy &amp; Security</h2>
-<p>We understand that financial data is sensitive. That's why Credo Analytics is built with a <strong>Local-First</strong> architecture.</p>
-<h3 id="how-it-works">How it works</h3>
+<div class="admonition info">
+<p class="admonition-title">How PDF parsing works</p>
+<p>The parser uses <code>pdfjs-dist</code> to extract text items with their X/Y positions from each page. It dynamically detects column boundaries from header positions (e.g., "Turnover (DB)", "Balance", "Description") and assigns text items to columns based on their X coordinate. Date entries (<code>DD.MM.YYYY</code> at <code>x &lt; 100</code>) mark row starts.</p>
+</div>
+<h3 id="csv">CSV<a class="headerlink" href="#csv" title="Permanent link">&para;</a></h3>
+<p>Plain text comma-separated format. The parser:</p>
+<ol>
+<li>Extracts account info from header lines (before the first data row)</li>
+<li>Handles quoted fields with embedded commas (e.g., <code>"1,220.09"</code>)</li>
+<li>Handles multiline descriptions (lines not starting with a date are appended to the previous row)</li>
+<li>Translates Georgian header keys to English automatically</li>
+</ol>
+<h2 id="how-to-upload">How to Upload<a class="headerlink" href="#how-to-upload" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Drag &amp; Drop</strong> — drag file(s) from your file explorer onto the upload zone</li>
+<li><strong>Click to Browse</strong> — click the upload button and select files</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Multiple files</p>
+<p>You can upload <strong>multiple files at once</strong>. The app automatically merges and deduplicates transactions across files. This works for:</p>
 <ul>
-<li><strong>No Server Uploads</strong>: When you "upload" a file, it is read directly by your web browser using JavaScript. The file contents never leave your computer.</li>
-<li><strong>No Database</strong>: There is no backend database storing your transactions. Everything resides in your browser's temporary memory or local storage.</li>
-<li><strong>Offline Capable</strong>: Once the page is loaded, you can disconnect from the internet and the application will continue to function perfectly.</li>
+<li>Multiple months of the same account</li>
+<li>Different accounts (GEL + USD)</li>
+<li>Mixed formats (some XLSX, some PDF)</li>
 </ul>
-<h3 id="how-to-verify">How to Verify</h3>
-<p>To prove that your data is safe, you can try this simple test:
-1. Open Credo Analytics.
-2. <strong>Disconnect your internet</strong> (turn off Wi-Fi or unplug your Ethernet cable).
-3. Upload your bank statements.
-4. Watch as the dashboard populates and analysis works flawlessly—without any network connection!</p>
-<h3 id="clearing-data">Clearing Data</h3>
-<p>If you want to remove all traces of your data from the browser, simply click the <strong>Reset Data</strong> (Trash Icon) button in the dashboard header. This will wipe the local storage and return the app to its initial state.</p>
+</div>
+<h2 id="currency-detection">Currency Detection<a class="headerlink" href="#currency-detection" title="Permanent link">&para;</a></h2>
+<p>The app determines each file's currency through this priority chain:</p>
+<ol>
+<li><strong>Account Info sheet</strong> — <code>Account Currency</code> field from XLSX/CSV headers</li>
+<li><strong>Filename pattern</strong> — detects currency codes in filenames like <code>MYCREDO_GEL_STATEMENT_...</code> or <code>statement_USD.pdf</code></li>
+<li><strong>Default</strong> — falls back to <code>GEL</code></li>
+</ol>
+<p>Supported filename patterns:</p>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>_GEL_</code></td>
+<td><code>MYCREDO_GEL_STATEMENT_2025.xlsx</code></td>
+</tr>
+<tr>
+<td><code>.USD.</code></td>
+<td><code>statement.USD.pdf</code></td>
+</tr>
+<tr>
+<td><code>-EUR-</code></td>
+<td><code>export-EUR-jan.csv</code></td>
+</tr>
+<tr>
+<td><code>GEL.xlsx</code></td>
+<td><code>GEL.xlsx</code></td>
+</tr>
+<tr>
+<td><code>STATEMENT_USD</code></td>
+<td><code>STATEMENT_USD.pdf</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="deduplication">Deduplication<a class="headerlink" href="#deduplication" title="Permanent link">&para;</a></h2>
+<p>When adding files to an existing dataset (via the "+ Add Files" button), the app prevents duplicate transactions using a composite key:</p>
+<div class="highlight"><pre><span></span><code>key = date | debit | credit | operation | currency | balance
+</code></pre></div>
+<p>Only transactions whose key doesn't already exist are added. This means you can safely re-upload overlapping files without getting duplicates.</p>
+<h2 id="data-storage">Data Storage<a class="headerlink" href="#data-storage" title="Permanent link">&para;</a></h2>
+<p>Parsed data is stored in the browser's <code>localStorage</code> under the key <code>credo_statement_data</code>. This means:</p>
+<ul>
+<li>Data persists across page refreshes and browser restarts</li>
+<li>Data is scoped to the browser and origin (not shared across devices)</li>
+<li>Clearing browser data or clicking "New File" removes everything</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Storage limits</p>
+<p><code>localStorage</code> has a ~5 MB limit in most browsers. For very large datasets (thousands of transactions across many accounts), you may approach this limit. The app handles quota errors gracefully — if it can't save, it will continue working from memory.</p>
+</div>
+<h2 id="offline-usage">Offline Usage<a class="headerlink" href="#offline-usage" title="Permanent link">&para;</a></h2>
+<p>After the first page load, the app works fully offline. To verify:</p>
+<ol>
+<li>Open the app and load it once</li>
+<li>Disconnect from the internet</li>
+<li>Upload a bank statement</li>
+<li>The dashboard will load and function normally</li>
+</ol>
+<p>The only feature that requires internet is <strong>exchange rate fetching</strong> for multi-currency accounts (from the NBG API).</p>
 
 
 
@@ -954,8 +1397,16 @@ You can upload <strong>multiple files at once</strong>. Whether you have monthly
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
         
       </main>
       
@@ -986,10 +1437,12 @@ You can upload <strong>multiple files at once</strong>. Whether you have monthly
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

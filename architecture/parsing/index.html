@@ -11,10 +11,8 @@
       
       
       
-        <link rel="prev" href="../exchange-rates/">
+        <link rel="prev" href="../data-model/">
       
-      
-        <link rel="next" href="../../architecture/data-model/">
       
       
         
@@ -25,7 +23,7 @@
     
     
       
-        <title>Formulas & Calculations - Credo Statement Analyzer</title>
+        <title>Parsing Pipeline - Credo Statement Analyzer</title>
       
     
     
@@ -76,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#formulas-calculations" class="md-skip">
+        <a href="#parsing-pipeline" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Formulas & Calculations
+              Parsing Pipeline
             
           </span>
         </div>
@@ -270,7 +268,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../all-time/" class="md-tabs__link">
+        <a href="../../analytics/all-time/" class="md-tabs__link">
           
   
   
@@ -292,7 +290,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+        <a href="../../analytics/formulas/" class="md-tabs__link">
           
   
   
@@ -659,7 +657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../all-time/" class="md-nav__link">
+      <a href="../../analytics/all-time/" class="md-nav__link">
         
   
   
@@ -687,7 +685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../periods/" class="md-nav__link">
+      <a href="../../analytics/periods/" class="md-nav__link">
         
   
   
@@ -715,7 +713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../custom/" class="md-nav__link">
+      <a href="../../analytics/custom/" class="md-nav__link">
         
   
   
@@ -743,7 +741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../insights/" class="md-nav__link">
+      <a href="../../analytics/insights/" class="md-nav__link">
         
   
   
@@ -771,7 +769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../categories/" class="md-nav__link">
+      <a href="../../analytics/categories/" class="md-nav__link">
         
   
   
@@ -799,7 +797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../exchange-rates/" class="md-nav__link">
+      <a href="../../analytics/exchange-rates/" class="md-nav__link">
         
   
   
@@ -888,6 +886,62 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analytics/formulas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formulas & Calculations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -907,7 +961,7 @@
   <span class="md-ellipsis">
     
   
-    Formulas & Calculations
+    Parsing Pipeline
   
 
     
@@ -925,7 +979,7 @@
   <span class="md-ellipsis">
     
   
-    Formulas & Calculations
+    Parsing Pipeline
   
 
     
@@ -951,22 +1005,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#core-financial-metrics" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Core Financial Metrics
+        Overview
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Core Financial Metrics">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xlsx-parser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XLSX Parser
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="XLSX Parser">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#total-income" class="md-nav__link">
+  <a href="#sheet-detection" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Total Income
+        Sheet detection
       
     </span>
   </a>
@@ -974,10 +1039,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#total-expense" class="md-nav__link">
+  <a href="#conversion-pipeline" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Total Expense
+        Conversion pipeline
       
     </span>
   </a>
@@ -985,32 +1050,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#net-result" class="md-nav__link">
+  <a href="#account-info-extraction" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Net Result
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#average-daily-expense" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Average Daily Expense
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#average-monthly-expense" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Average Monthly Expense
+        Account info extraction
       
     </span>
   </a>
@@ -1023,22 +1066,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#balance" class="md-nav__link">
+  <a href="#pdf-parser" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Balance
+        PDF Parser
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Balance">
+    <nav class="md-nav" aria-label="PDF Parser">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#starting-balance" class="md-nav__link">
+  <a href="#format-detection" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Starting Balance
+        Format detection
       
     </span>
   </a>
@@ -1046,10 +1089,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#current-balance" class="md-nav__link">
+  <a href="#full-statement-parsing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Current Balance
+        Full statement parsing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Full statement parsing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-extract-text-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Extract text items
       
     </span>
   </a>
@@ -1057,10 +1112,59 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#combined-closing-balance-multi-account" class="md-nav__link">
+  <a href="#step-2-detect-column-boundaries" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Combined Closing Balance (Multi-Account)
+        Step 2: Detect column boundaries
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-identify-row-starts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Identify row starts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-assign-items-to-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Assign items to columns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-build-transaction-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Build transaction objects
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payment-receipt-parsing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Payment receipt parsing
       
     </span>
   </a>
@@ -1073,33 +1177,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#savings-rate" class="md-nav__link">
+  <a href="#csv-parser" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Savings Rate
+        CSV Parser
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#period-comparison" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Period Comparison
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Period Comparison">
+    <nav class="md-nav" aria-label="CSV Parser">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#period-stats" class="md-nav__link">
+  <a href="#structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Period Stats
+        Structure
       
     </span>
   </a>
@@ -1107,10 +1200,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#percentage-change" class="md-nav__link">
+  <a href="#parsing-rules" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Percentage Change
+        Parsing rules
       
     </span>
   </a>
@@ -1118,10 +1211,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#category-changes" class="md-nav__link">
+  <a href="#amount-parsing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Category Changes
+        Amount parsing
       
     </span>
   </a>
@@ -1134,33 +1227,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#financial-stability-score" class="md-nav__link">
+  <a href="#multi-file-merging" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Financial Stability Score
+        Multi-File Merging
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Financial Stability Score">
+    <nav class="md-nav" aria-label="Multi-File Merging">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sub-scores" class="md-nav__link">
+  <a href="#adding-files-later" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Sub-scores
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#composite-score" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Composite Score
+        Adding files later
       
     </span>
   </a>
@@ -1173,110 +1255,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#vampire-expenses" class="md-nav__link">
+  <a href="#currency-detection-from-filenames" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Vampire Expenses
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Vampire Expenses">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#detection-criteria" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Detection Criteria
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#metrics" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Metrics
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#day-of-week-patterns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Day-of-Week Patterns
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#category-trends" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Category Trends
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Category Trends">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#algorithm" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Algorithm
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#living-standard-progress" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Living Standard Progress
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exchange-rate-conversion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exchange Rate Conversion
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rounding" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Rounding
+        Currency Detection from Filenames
       
     </span>
   </a>
@@ -1287,62 +1269,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../architecture/data-model/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Data Model
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../architecture/parsing/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Parsing Pipeline
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -1382,22 +1308,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#core-financial-metrics" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Core Financial Metrics
+        Overview
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Core Financial Metrics">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xlsx-parser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XLSX Parser
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="XLSX Parser">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#total-income" class="md-nav__link">
+  <a href="#sheet-detection" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Total Income
+        Sheet detection
       
     </span>
   </a>
@@ -1405,10 +1342,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#total-expense" class="md-nav__link">
+  <a href="#conversion-pipeline" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Total Expense
+        Conversion pipeline
       
     </span>
   </a>
@@ -1416,32 +1353,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#net-result" class="md-nav__link">
+  <a href="#account-info-extraction" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Net Result
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#average-daily-expense" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Average Daily Expense
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#average-monthly-expense" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Average Monthly Expense
+        Account info extraction
       
     </span>
   </a>
@@ -1454,22 +1369,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#balance" class="md-nav__link">
+  <a href="#pdf-parser" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Balance
+        PDF Parser
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Balance">
+    <nav class="md-nav" aria-label="PDF Parser">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#starting-balance" class="md-nav__link">
+  <a href="#format-detection" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Starting Balance
+        Format detection
       
     </span>
   </a>
@@ -1477,10 +1392,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#current-balance" class="md-nav__link">
+  <a href="#full-statement-parsing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Current Balance
+        Full statement parsing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Full statement parsing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-extract-text-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Extract text items
       
     </span>
   </a>
@@ -1488,10 +1415,59 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#combined-closing-balance-multi-account" class="md-nav__link">
+  <a href="#step-2-detect-column-boundaries" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Combined Closing Balance (Multi-Account)
+        Step 2: Detect column boundaries
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-identify-row-starts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Identify row starts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-assign-items-to-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 4: Assign items to columns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-build-transaction-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5: Build transaction objects
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payment-receipt-parsing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Payment receipt parsing
       
     </span>
   </a>
@@ -1504,33 +1480,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#savings-rate" class="md-nav__link">
+  <a href="#csv-parser" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Savings Rate
+        CSV Parser
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#period-comparison" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Period Comparison
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Period Comparison">
+    <nav class="md-nav" aria-label="CSV Parser">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#period-stats" class="md-nav__link">
+  <a href="#structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Period Stats
+        Structure
       
     </span>
   </a>
@@ -1538,10 +1503,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#percentage-change" class="md-nav__link">
+  <a href="#parsing-rules" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Percentage Change
+        Parsing rules
       
     </span>
   </a>
@@ -1549,10 +1514,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#category-changes" class="md-nav__link">
+  <a href="#amount-parsing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Category Changes
+        Amount parsing
       
     </span>
   </a>
@@ -1565,33 +1530,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#financial-stability-score" class="md-nav__link">
+  <a href="#multi-file-merging" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Financial Stability Score
+        Multi-File Merging
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Financial Stability Score">
+    <nav class="md-nav" aria-label="Multi-File Merging">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sub-scores" class="md-nav__link">
+  <a href="#adding-files-later" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Sub-scores
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#composite-score" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Composite Score
+        Adding files later
       
     </span>
   </a>
@@ -1604,110 +1558,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#vampire-expenses" class="md-nav__link">
+  <a href="#currency-detection-from-filenames" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Vampire Expenses
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Vampire Expenses">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#detection-criteria" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Detection Criteria
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#metrics" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Metrics
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#day-of-week-patterns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Day-of-Week Patterns
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#category-trends" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Category Trends
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Category Trends">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#algorithm" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Algorithm
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#living-standard-progress" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Living Standard Progress
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exchange-rate-conversion" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exchange Rate Conversion
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rounding" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Rounding
+        Currency Detection from Filenames
       
     </span>
   </a>
@@ -1731,300 +1585,287 @@
 
 
 
-<h1 id="formulas-calculations">Formulas &amp; Calculations<a class="headerlink" href="#formulas-calculations" title="Permanent link">&para;</a></h1>
-<p>Transparency is important. This page documents every formula used in Credo Statement Analyzer, with examples.</p>
-<hr />
-<h2 id="core-financial-metrics">Core Financial Metrics<a class="headerlink" href="#core-financial-metrics" title="Permanent link">&para;</a></h2>
-<h3 id="total-income">Total Income<a class="headerlink" href="#total-income" title="Permanent link">&para;</a></h3>
-<div class="arithmatex">\[
-\text{Total Income} = \sum_{i=1}^{N} \text{credit}_i
-\]</div>
-<p>Where <code>credit</code> is the incoming amount for each transaction. Transactions with <code>credit = 0</code> are expenses and are excluded from this sum.</p>
-<p><strong>Example</strong>: If you received three payments of 1000, 2500, and 500 GEL:</p>
-<div class="arithmatex">\[
-\text{Total Income} = 1000 + 2500 + 500 = 4000 \text{ GEL}
-\]</div>
-<h3 id="total-expense">Total Expense<a class="headerlink" href="#total-expense" title="Permanent link">&para;</a></h3>
-<div class="arithmatex">\[
-\text{Total Expense} = \sum_{i=1}^{N} \text{debit}_i
-\]</div>
-<p>Where <code>debit</code> is the outgoing amount. Transactions with <code>debit = 0</code> are income and excluded.</p>
-<h3 id="net-result">Net Result<a class="headerlink" href="#net-result" title="Permanent link">&para;</a></h3>
-<div class="arithmatex">\[
-\text{Net} = \text{Total Income} - \text{Total Expense}
-\]</div>
-<ul>
-<li><strong>Positive</strong> (green): you earned more than you spent</li>
-<li><strong>Negative</strong> (red): you spent more than you earned</li>
-</ul>
-<h3 id="average-daily-expense">Average Daily Expense<a class="headerlink" href="#average-daily-expense" title="Permanent link">&para;</a></h3>
-<div class="arithmatex">\[
-\text{Avg Daily Expense} = \frac{\text{Total Expense}}{D}
-\]</div>
-<p>Where <span class="arithmatex">\(D\)</span> is the number of <strong>unique days</strong> that have at least one transaction (not calendar days).</p>
-<p><strong>Example</strong>: 3000 GEL spent over 20 unique days = 150 GEL/day</p>
-<h3 id="average-monthly-expense">Average Monthly Expense<a class="headerlink" href="#average-monthly-expense" title="Permanent link">&para;</a></h3>
-<div class="arithmatex">\[
-\text{Avg Monthly Expense} = \frac{\text{Total Expense}}{M}
-\]</div>
-<p>Where <span class="arithmatex">\(M\)</span> is the number of <strong>unique months</strong> that have at least one transaction.</p>
-<hr />
-<h2 id="balance">Balance<a class="headerlink" href="#balance" title="Permanent link">&para;</a></h2>
-<h3 id="starting-balance">Starting Balance<a class="headerlink" href="#starting-balance" title="Permanent link">&para;</a></h3>
-<p>Derived from the first transaction in the dataset:</p>
-<div class="arithmatex">\[
-\text{Starting Balance} = \text{balance}_1 - (\text{credit}_1 - \text{debit}_1)
-\]</div>
-<p>This reconstructs the balance that existed <em>before</em> the first transaction.</p>
-<h3 id="current-balance">Current Balance<a class="headerlink" href="#current-balance" title="Permanent link">&para;</a></h3>
-<p>The <code>balance</code> field of the last transaction in the sorted dataset.</p>
-<h3 id="combined-closing-balance-multi-account">Combined Closing Balance (Multi-Account)<a class="headerlink" href="#combined-closing-balance-multi-account" title="Permanent link">&para;</a></h3>
-<p>When multiple account files are loaded, each provides a <code>Closing Balance</code> in its account info. The combined balance is:</p>
-<div class="arithmatex">\[
-\text{Combined Balance} = \sum_{a \in \text{accounts}} \text{convert}(\text{Closing Balance}_a, \text{currency}_a, \text{display currency})
-\]</div>
-<p>If the combined closing balance differs from the calculated net by more than 0.05, an adjustment term is added:</p>
-<div class="arithmatex">\[
-\text{Adjustment} = \text{Combined Closing Balance} - \text{Net}
-\]</div>
-<p>This reconciles discrepancies from transactions outside the exported date range.</p>
-<hr />
-<h2 id="savings-rate">Savings Rate<a class="headerlink" href="#savings-rate" title="Permanent link">&para;</a></h2>
-<p>Calculated per calendar month:</p>
-<div class="arithmatex">\[
-\text{Savings}_m = \text{Income}_m - \text{Expense}_m
-\]</div>
-<div class="arithmatex">\[
-\text{Savings Rate}_m = \begin{cases} \frac{\text{Income}_m - \text{Expense}_m}{\text{Income}_m} \times 100 &amp; \text{if } \text{Income}_m &gt; 0 \\ 0 &amp; \text{otherwise} \end{cases}
-\]</div>
-<p><strong>Example</strong>:</p>
+<h1 id="parsing-pipeline">Parsing Pipeline<a class="headerlink" href="#parsing-pipeline" title="Permanent link">&para;</a></h1>
+<p>This page documents how Credo Statement Analyzer converts raw bank files into structured transaction objects.</p>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>File (.xlsx / .pdf / .csv)
+    |
+    v
+detectFileType(extension)
+    |
+    ├── .xlsx → parseXLSX()
+    ├── .pdf  → parsePDF()
+    └── .csv  → parseCSVFile()
+    |
+    v
+Normalized Transaction Objects
+    |
+    v
+Currency stamping (from accountInfo / filename / default)
+    |
+    v
+Chronological sort
+</code></pre></div>
+<h2 id="xlsx-parser">XLSX Parser<a class="headerlink" href="#xlsx-parser" title="Permanent link">&para;</a></h2>
+<h3 id="sheet-detection">Sheet detection<a class="headerlink" href="#sheet-detection" title="Permanent link">&para;</a></h3>
+<p>The parser scans all sheet names in the workbook looking for:</p>
 <table>
 <thead>
 <tr>
-<th>Month</th>
-<th>Income</th>
-<th>Expense</th>
-<th>Savings</th>
-<th>Rate</th>
+<th>Sheet type</th>
+<th>Matched names</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Jan</td>
-<td>5000</td>
-<td>3500</td>
-<td>1500</td>
-<td>30.0%</td>
+<td>Transactions</td>
+<td>Contains <code>"transaction"</code> (EN) or <code>"ტრანზაქცი"</code> (GE)</td>
 </tr>
 <tr>
-<td>Feb</td>
-<td>5000</td>
-<td>5200</td>
-<td>-200</td>
-<td>-4.0%</td>
-</tr>
-<tr>
-<td>Mar</td>
-<td>0</td>
-<td>800</td>
-<td>-800</td>
-<td>0%</td>
+<td>Account Details</td>
+<td>Contains <code>"account"</code>, <code>"detail"</code> (EN) or <code>"დეტალები"</code> (GE)</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="period-comparison">Period Comparison<a class="headerlink" href="#period-comparison" title="Permanent link">&para;</a></h2>
-<p>Compares the current period against the previous period using daily averages to normalize for different period lengths.</p>
-<h3 id="period-stats">Period Stats<a class="headerlink" href="#period-stats" title="Permanent link">&para;</a></h3>
-<p>For a set of transactions in a period:</p>
-<div class="arithmatex">\[
-\text{Avg Daily Income} = \frac{\sum \text{credit}_i}{D}
-\]</div>
-<div class="arithmatex">\[
-\text{Avg Daily Expense} = \frac{\sum \text{debit}_i}{D}
-\]</div>
-<div class="arithmatex">\[
-\text{Savings Rate} = \frac{\text{Income} - \text{Expense}}{\text{Income}} \times 100
-\]</div>
-<h3 id="percentage-change">Percentage Change<a class="headerlink" href="#percentage-change" title="Permanent link">&para;</a></h3>
-<div class="arithmatex">\[
-\Delta\% = \frac{\text{Current} - \text{Previous}}{|\text{Previous}|} \times 100
-\]</div>
-<p>Edge case: if <span class="arithmatex">\(\text{Previous} = 0\)</span> and <span class="arithmatex">\(\text{Current} &gt; 0\)</span>, the change is <span class="arithmatex">\(+100\%\)</span>.</p>
-<p>For savings rate, the change is in <strong>percentage points</strong>:</p>
-<div class="arithmatex">\[
-\Delta_{pp} = \text{Savings Rate}_{\text{current}} - \text{Savings Rate}_{\text{previous}}
-\]</div>
-<h3 id="category-changes">Category Changes<a class="headerlink" href="#category-changes" title="Permanent link">&para;</a></h3>
-<p>Per-category spending change between current and previous period:</p>
-<div class="arithmatex">\[
-\Delta_{\text{cat}} = \sum_{\text{current}} \text{debit}_{\text{cat}} - \sum_{\text{previous}} \text{debit}_{\text{cat}}
-\]</div>
-<div class="arithmatex">\[
-\Delta\%_{\text{cat}} = \frac{\Delta_{\text{cat}}}{\sum_{\text{previous}} \text{debit}_{\text{cat}}} \times 100
-\]</div>
-<p>Only the top 5 categories by absolute change are shown.</p>
-<hr />
-<h2 id="financial-stability-score">Financial Stability Score<a class="headerlink" href="#financial-stability-score" title="Permanent link">&para;</a></h2>
-<p>A composite score from 0 to 100, calculated from three sub-scores.</p>
-<h3 id="sub-scores">Sub-scores<a class="headerlink" href="#sub-scores" title="Permanent link">&para;</a></h3>
-<p><strong>1. Income Stability</strong> — based on the <a href="https://en.wikipedia.org/wiki/Coefficient_of_variation">coefficient of variation</a> of monthly income:</p>
-<div class="arithmatex">\[
-\text{CV}_{\text{income}} = \frac{\sigma(\text{monthly incomes})}{\mu(\text{monthly incomes})}
-\]</div>
-<div class="arithmatex">\[
-\text{Income Score} = \text{clamp}(100 - \text{CV}_{\text{income}} \times 100, \; 0, \; 100)
-\]</div>
-<p>A perfectly stable income (same amount every month) scores 100. Highly variable income scores near 0.</p>
-<p><strong>2. Expense Stability</strong> — same formula applied to monthly expenses:</p>
-<div class="arithmatex">\[
-\text{Expense Score} = \text{clamp}(100 - \text{CV}_{\text{expense}} \times 100, \; 0, \; 100)
-\]</div>
-<p><strong>3. Savings Consistency</strong> — percentage of months where income exceeded expenses:</p>
-<div class="arithmatex">\[
-\text{Savings Score} = \frac{|\{m : \text{Income}_m &gt; \text{Expense}_m\}|}{|\text{Total Months}|} \times 100
-\]</div>
-<h3 id="composite-score">Composite Score<a class="headerlink" href="#composite-score" title="Permanent link">&para;</a></h3>
-<div class="arithmatex">\[
-\text{Overall} = \text{clamp}\Big(0.35 \times \text{Income Score} + 0.30 \times \text{Expense Score} + 0.35 \times \text{Savings Score}, \; 0, \; 100\Big)
-\]</div>
-<p><strong>Interpretation</strong>:</p>
+<p>If no Transactions sheet is found, the <strong>last sheet</strong> in the workbook is used as fallback.</p>
+<h3 id="conversion-pipeline">Conversion pipeline<a class="headerlink" href="#conversion-pipeline" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Read the Excel file as <code>Uint8Array</code> using <code>FileReader</code></li>
+<li>Parse with SheetJS: <code>XLSX.read(data, { type: 'array', cellDates: true })</code></li>
+<li>Convert to CSV string: <code>XLSX.utils.sheet_to_csv(sheet, { dateNF: 'yyyy/mm/dd' })</code></li>
+<li>Parse the CSV string with the internal <code>parseCSV()</code> function</li>
+</ol>
+<h3 id="account-info-extraction">Account info extraction<a class="headerlink" href="#account-info-extraction" title="Permanent link">&para;</a></h3>
+<p>From the Account Details sheet, key-value pairs are read (column A = key, column B = value). Georgian keys are mapped to English:</p>
 <table>
 <thead>
 <tr>
-<th>Score</th>
-<th>Label</th>
-<th>Meaning</th>
+<th>Georgian</th>
+<th>English</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>70–100</td>
-<td>Excellent</td>
-<td>Stable income, controlled expenses, consistent savings</td>
+<td>ანგარიშის მფლობელი</td>
+<td>Account Holder</td>
 </tr>
 <tr>
-<td>40–69</td>
-<td>Average</td>
-<td>Some volatility, occasional overspending</td>
+<td>საიდენტიფიკაციო ნომერი</td>
+<td>Identification Number</td>
 </tr>
 <tr>
-<td>0–39</td>
-<td>Poor</td>
-<td>Highly variable income/expenses, rarely saving</td>
+<td>ამონაწერის პერიოდი</td>
+<td>Statement Period</td>
+</tr>
+<tr>
+<td>ანგარიშის ნომერი</td>
+<td>Account Number</td>
+</tr>
+<tr>
+<td>ანგარიშის ვალუტა</td>
+<td>Account Currency</td>
+</tr>
+<tr>
+<td>საწყისი ნაშთი</td>
+<td>Opening Balance</td>
+</tr>
+<tr>
+<td>საბოლოო ნაშთი</td>
+<td>Closing Balance</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Example</strong>: 12 months of data, income CV = 0.15, expense CV = 0.25, 9 out of 12 months positive:</p>
+<h2 id="pdf-parser">PDF Parser<a class="headerlink" href="#pdf-parser" title="Permanent link">&para;</a></h2>
+<h3 id="format-detection">Format detection<a class="headerlink" href="#format-detection" title="Permanent link">&para;</a></h3>
+<p>The parser reads page 1 text and checks for the presence of <code>"Account Statement"</code> or <code>"ამონაწერი"</code>. This determines whether the file is:</p>
 <ul>
-<li>Income Score = clamp(100 - 15, 0, 100) = <strong>85</strong></li>
-<li>Expense Score = clamp(100 - 25, 0, 100) = <strong>75</strong></li>
-<li>Savings Score = (9/12) x 100 = <strong>75</strong></li>
-<li>Overall = 0.35 x 85 + 0.30 x 75 + 0.35 x 75 = 29.75 + 22.5 + 26.25 = <strong>78.5</strong></li>
+<li><strong>Full statement</strong> → <code>parsePDFStatement()</code> — multi-page transaction table</li>
+<li><strong>Payment receipt</strong> → <code>parsePDFReceipt()</code> — single transaction document</li>
 </ul>
-<hr />
-<h2 id="vampire-expenses">Vampire Expenses<a class="headerlink" href="#vampire-expenses" title="Permanent link">&para;</a></h2>
-<p>Small recurring charges that individually seem negligible but accumulate over time.</p>
-<h3 id="detection-criteria">Detection Criteria<a class="headerlink" href="#detection-criteria" title="Permanent link">&para;</a></h3>
-<p>A merchant qualifies as a "vampire" if:</p>
-<ol>
-<li>Individual transaction amount &lt; <strong>15 GEL</strong> (configurable threshold)</li>
-<li>The merchant appears on <strong>3 or more unique dates</strong></li>
-</ol>
-<h3 id="metrics">Metrics<a class="headerlink" href="#metrics" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Metric</th>
-<th>Formula</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Count</td>
-<td>Number of matching transactions</td>
-</tr>
-<tr>
-<td>Total</td>
-<td><span class="arithmatex">\(\sum \text{debit}_i\)</span> for that merchant</td>
-</tr>
-<tr>
-<td>Average</td>
-<td><span class="arithmatex">\(\frac{\text{Total}}{\text{Count}}\)</span></td>
-</tr>
-<tr>
-<td>Frequency</td>
-<td>Number of unique dates</td>
-</tr>
-</tbody>
-</table>
-<p>Results are sorted by total descending, capped at 6 merchants.</p>
-<p><strong>Example</strong>: You buy coffee at "STARBUCKS" for 8 GEL, 12 times across 10 different days:</p>
-<ul>
-<li>Count: 12, Total: 96 GEL, Average: 8 GEL, Frequency: 10</li>
-</ul>
-<hr />
-<h2 id="day-of-week-patterns">Day-of-Week Patterns<a class="headerlink" href="#day-of-week-patterns" title="Permanent link">&para;</a></h2>
-<p>Average daily expense per weekday (Monday through Sunday).</p>
-<div class="arithmatex">\[
-\text{Avg}_{\text{weekday}} = \frac{\sum_{\text{txs on weekday}} \text{debit}_i}{|\text{unique dates on weekday}|}
-\]</div>
-<p>Days use Monday-based indexing: Mon=0, Tue=1, ..., Sun=6.</p>
-<p>The <strong>peak day</strong> (highest average) is highlighted in the chart.</p>
-<hr />
-<h2 id="category-trends">Category Trends<a class="headerlink" href="#category-trends" title="Permanent link">&para;</a></h2>
-<p>Compares average monthly spending per category between the first half and second half of your data.</p>
-<h3 id="algorithm">Algorithm<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Collect all unique months, sort chronologically</li>
-<li>Split at the midpoint: <code>firstHalf = months[0..mid-1]</code>, <code>secondHalf = months[mid..end]</code></li>
-<li>For each expense category:</li>
-</ol>
-<div class="arithmatex">\[
-\text{Change}\% = \frac{\text{Avg}_{\text{second}} - \text{Avg}_{\text{first}}}{\text{Avg}_{\text{first}}} \times 100
-\]</div>
-<ol>
-<li>Categories where both averages are below 5 are excluded (noise)</li>
-<li>Top 6 categories by absolute change percentage are shown</li>
-</ol>
-<p><strong>Example</strong>: Grocery averaged 800/month first half, 950/month second half:</p>
-<div class="arithmatex">\[
-\text{Change} = \frac{950 - 800}{800} \times 100 = +18.75\%
-\]</div>
-<hr />
-<h2 id="living-standard-progress">Living Standard Progress<a class="headerlink" href="#living-standard-progress" title="Permanent link">&para;</a></h2>
-<p>Compares average income, expense, and savings between the first and second halves of your data.</p>
-<div class="arithmatex">\[
-\text{Income Change}\% = \frac{\text{Avg Income}_{\text{2nd}} - \text{Avg Income}_{\text{1st}}}{\text{Avg Income}_{\text{1st}}} \times 100
-\]</div>
-<div class="arithmatex">\[
-\text{Savings Change} = (\text{Avg Income}_{\text{2nd}} - \text{Avg Expense}_{\text{2nd}}) - (\text{Avg Income}_{\text{1st}} - \text{Avg Expense}_{\text{1st}})
-\]</div>
-<p><strong>Example</strong>: First half: avg income 5000, avg expense 4000. Second half: avg income 6000, avg expense 4500.</p>
-<ul>
-<li>Income change: +20%, Expense change: +12.5%, Savings change: +500 GEL</li>
-</ul>
-<hr />
-<h2 id="exchange-rate-conversion">Exchange Rate Conversion<a class="headerlink" href="#exchange-rate-conversion" title="Permanent link">&para;</a></h2>
-<p>All conversions use GEL as the intermediary currency via NBG rates.</p>
-<div class="arithmatex">\[
-\text{GEL per 1 unit} = \frac{\text{rate}}{\text{quantity}}
-\]</div>
-<div class="arithmatex">\[
-\text{amount}_{\text{target}} = \frac{\text{amount}_{\text{source}} \times (\text{rate}_{\text{source}} / \text{quantity}_{\text{source}})}{(\text{rate}_{\text{target}} / \text{quantity}_{\text{target}})}
-\]</div>
-<p><strong>Example</strong>: Convert 100 USD to EUR. USD rate=2.6856, EUR rate=2.9123:</p>
-<div class="arithmatex">\[
-\frac{100 \times 2.6856}{2.9123} = 92.21 \text{ EUR}
-\]</div>
-<p>See <a href="../exchange-rates/">Exchange Rates</a> for the full system.</p>
-<hr />
-<h2 id="rounding">Rounding<a class="headerlink" href="#rounding" title="Permanent link">&para;</a></h2>
-<p>All financial calculations use rounding to 2 decimal places:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">round</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">100</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">100</span><span class="p">;</span>
+<h3 id="full-statement-parsing">Full statement parsing<a class="headerlink" href="#full-statement-parsing" title="Permanent link">&para;</a></h3>
+<p>This is the most complex parser. It reconstructs a table from positioned text items.</p>
+<h4 id="step-1-extract-text-items">Step 1: Extract text items<a class="headerlink" href="#step-1-extract-text-items" title="Permanent link">&para;</a></h4>
+<p>Using <code>pdfjs-dist</code>, each page is processed to extract text items with their position:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nx">str</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;318.58&quot;</span><span class="p">,</span><span class="w">     </span><span class="c1">// the text content</span>
+<span class="w">    </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="mf">245</span><span class="p">,</span><span class="w">            </span><span class="c1">// horizontal position (pixels from left)</span>
+<span class="w">    </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="mf">382</span><span class="p">,</span><span class="w">            </span><span class="c1">// vertical position (pixels from bottom)</span>
+<span class="w">    </span><span class="nx">page</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="w">            </span><span class="c1">// page number</span>
 <span class="p">}</span>
 </code></pre></div>
+<h4 id="step-2-detect-column-boundaries">Step 2: Detect column boundaries<a class="headerlink" href="#step-2-detect-column-boundaries" title="Permanent link">&para;</a></h4>
+<p>The parser scans page 1 for header text (e.g., "Date", "Turnover (DB)", "Balance") and records their X positions. Column boundaries are set at the midpoint between adjacent headers.</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Left boundary</th>
+<th>Right boundary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Date</td>
+<td>0</td>
+<td>mid(Date, Operation)</td>
+</tr>
+<tr>
+<td>Operation</td>
+<td>mid(Date, Op)</td>
+<td>mid(Op, Debit)</td>
+</tr>
+<tr>
+<td>Debit</td>
+<td>mid(Op, DB)</td>
+<td>mid(DB, Credit)</td>
+</tr>
+<tr>
+<td>Credit</td>
+<td>mid(DB, CR)</td>
+<td>mid(CR, Balance)</td>
+</tr>
+<tr>
+<td>Balance</td>
+<td>mid(CR, Bal)</td>
+<td>mid(Bal, Description)</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>mid(Bal, Desc)</td>
+<td>mid(Desc, BenefName)</td>
+</tr>
+<tr>
+<td>Beneficiary Name</td>
+<td>mid(Desc, BName)</td>
+<td>mid(BName, BAccount)</td>
+</tr>
+<tr>
+<td>Beneficiary Account</td>
+<td>mid(BName, BAcc)</td>
+<td>page right edge</td>
+</tr>
+</tbody>
+</table>
+<p>If headers aren't found (e.g., Georgian-only statement), default hardcoded boundaries are used.</p>
+<div class="admonition info">
+<p class="admonition-title">Split header handling</p>
+<p>Some headers span two PDF text items (e.g., <code>"Turnover"</code> + <code>"(DB)"</code> as separate items). The parser handles this by searching for nearby items within 80px horizontal distance on the same Y line.</p>
+</div>
+<h4 id="step-3-identify-row-starts">Step 3: Identify row starts<a class="headerlink" href="#step-3-identify-row-starts" title="Permanent link">&para;</a></h4>
+<p>A row starts wherever a date pattern <code>DD.MM.YYYY</code> appears at x &lt; DATE_MAX. All items between consecutive row starts are assigned to that row.</p>
+<h4 id="step-4-assign-items-to-columns">Step 4: Assign items to columns<a class="headerlink" href="#step-4-assign-items-to-columns" title="Permanent link">&para;</a></h4>
+<p>For each row, items are sorted into columns based on their X position relative to the detected boundaries. Header text items are pre-filtered out.</p>
+<h4 id="step-5-build-transaction-objects">Step 5: Build transaction objects<a class="headerlink" href="#step-5-build-transaction-objects" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Date: converted from <code>DD.MM.YYYY</code> to <code>YYYY/MM/DD</code></li>
+<li>Debit/Credit/Balance: extracted using monetary pattern matching (<code>/^\d+\.\d{2}$/</code>)</li>
+<li>Description and beneficiary: joined from all text items in those columns</li>
+</ul>
+<h3 id="payment-receipt-parsing">Payment receipt parsing<a class="headerlink" href="#payment-receipt-parsing" title="Permanent link">&para;</a></h3>
+<p>A simpler regex-based parser that extracts:</p>
+<ul>
+<li>Operation date: from <code>"Operation Date YYYY-MM-DD"</code> pattern</li>
+<li>Amount: from <code>"Amount: 1,234.56 GEL"</code> pattern</li>
+<li>Details: from <code>"Operation Details: ..."</code> pattern</li>
+<li>Receiver: name and account number from labeled fields</li>
+</ul>
+<p>Receipts always produce a single expense transaction.</p>
+<h2 id="csv-parser">CSV Parser<a class="headerlink" href="#csv-parser" title="Permanent link">&para;</a></h2>
+<h3 id="structure">Structure<a class="headerlink" href="#structure" title="Permanent link">&para;</a></h3>
+<p>Credo Bank CSV files have:</p>
+<ol>
+<li><strong>Header section</strong> — key-value pairs (account info) before data rows</li>
+<li><strong>Column header row</strong> — typically <code>Date, Operation, Turnover (DB), Turnover (Cr), Balance, Description, ...</code></li>
+<li><strong>Data rows</strong> — one per transaction</li>
+</ol>
+<h3 id="parsing-rules">Parsing rules<a class="headerlink" href="#parsing-rules" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Challenge</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Comma inside numbers</td>
+<td>Quoted fields: <code>"1,220.09"</code> — parser respects quote boundaries</td>
+</tr>
+<tr>
+<td>Multiline descriptions</td>
+<td>If a line doesn't start with <code>YYYY/</code>, it's appended to the previous transaction's operation</td>
+</tr>
+<tr>
+<td>Unclosed quotes</td>
+<td>Lines are joined until quote count is even</td>
+</tr>
+<tr>
+<td>Georgian headers</td>
+<td>Mapped to English via the same key map as XLSX</td>
+</tr>
+</tbody>
+</table>
+<h3 id="amount-parsing">Amount parsing<a class="headerlink" href="#amount-parsing" title="Permanent link">&para;</a></h3>
+<p>All amounts go through:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">parseAmount</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">cleaned</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">str</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/,/g</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">).</span><span class="nx">trim</span><span class="p">();</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">cleaned</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">num</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>This handles: <code>"1,220.09"</code> → <code>1220.09</code>, <code>""</code> → <code>0</code>, <code>"abc"</code> → <code>0</code>.</p>
+<h2 id="multi-file-merging">Multi-File Merging<a class="headerlink" href="#multi-file-merging" title="Permanent link">&para;</a></h2>
+<p>When multiple files are uploaded at once via <code>parseFiles()</code>:</p>
+<ol>
+<li>Each file is parsed independently</li>
+<li>Currency is determined per file (accountInfo &gt; filename &gt; default)</li>
+<li>All transactions are stamped with their currency</li>
+<li>Transactions from all files are concatenated</li>
+<li>The combined array is sorted by date ascending</li>
+<li>All account info objects are collected</li>
+</ol>
+<h3 id="adding-files-later">Adding files later<a class="headerlink" href="#adding-files-later" title="Permanent link">&para;</a></h3>
+<p>When using "+ Add Files" from the dashboard, a deduplication step runs:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">makeKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">tx</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span>
+<span class="w">    </span><span class="sb">`</span><span class="si">${</span><span class="nx">tx</span><span class="p">.</span><span class="nx">date</span><span class="si">}</span><span class="sb">|</span><span class="si">${</span><span class="nx">tx</span><span class="p">.</span><span class="nx">debit</span><span class="si">}</span><span class="sb">|</span><span class="si">${</span><span class="nx">tx</span><span class="p">.</span><span class="nx">credit</span><span class="si">}</span><span class="sb">|</span><span class="si">${</span><span class="nx">tx</span><span class="p">.</span><span class="nx">operation</span><span class="si">}</span><span class="sb">|</span><span class="si">${</span><span class="nx">tx</span><span class="p">.</span><span class="nx">currency</span><span class="si">}</span><span class="sb">|</span><span class="si">${</span><span class="nx">tx</span><span class="p">.</span><span class="nx">balance</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">existingKeys</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Set</span><span class="p">(</span><span class="nx">existingTransactions</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">makeKey</span><span class="p">));</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">newTx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">parsedTransactions</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">tx</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="o">!</span><span class="nx">existingKeys</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="nx">makeKey</span><span class="p">(</span><span class="nx">tx</span><span class="p">)));</span>
+</code></pre></div>
+<p>This prevents duplicates when re-uploading files that overlap with existing data.</p>
+<h2 id="currency-detection-from-filenames">Currency Detection from Filenames<a class="headerlink" href="#currency-detection-from-filenames" title="Permanent link">&para;</a></h2>
+<p>If the account info sheet doesn't specify a currency, the parser tries to detect it from the filename:</p>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Regex</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>_GEL_</code>, <code>_USD_</code></td>
+<td><code>/_(\w+)_/i</code></td>
+</tr>
+<tr>
+<td><code>.GEL.</code>, <code>.USD.</code></td>
+<td><code>/[._-](\w+)[._-]/i</code></td>
+</tr>
+<tr>
+<td><code>GEL.xlsx</code></td>
+<td><code>/(\w+)\.(PDF\|XLSX?\|CSV)/i</code></td>
+</tr>
+<tr>
+<td><code>STATEMENT_USD</code></td>
+<td><code>/STATEMENT[._-](\w+)/i</code></td>
+</tr>
+<tr>
+<td><code>GEL STATEMENT</code></td>
+<td><code>/(\w+)\s*STATEMENT/i</code></td>
+</tr>
+</tbody>
+</table>
+<p>Supported currencies: GEL, USD, EUR, RUB, GBP.</p>
 
 
 
