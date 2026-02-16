@@ -29,6 +29,13 @@
         <xhtml:link rel="alternate" hreflang="ru" href="https://Vlad1k3.github.io/credo-app/ru/introduction/"/>
     </url>
     <url>
+        <loc>https://Vlad1k3.github.io/credo-app/support/</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://Vlad1k3.github.io/credo-app/support/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://Vlad1k3.github.io/credo-app/ru/support/"/>
+    </url>
+    <url>
         <loc>https://Vlad1k3.github.io/credo-app/analytics/all-time/</loc>
         <lastmod>2026-02-16</lastmod>
         <changefreq>daily</changefreq>
@@ -132,6 +139,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ru" href="https://Vlad1k3.github.io/credo-app/ru/introduction/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://Vlad1k3.github.io/credo-app/introduction/"/>
+    </url>
+    <url>
+        <loc>https://Vlad1k3.github.io/credo-app/ru/support/</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://Vlad1k3.github.io/credo-app/ru/support/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://Vlad1k3.github.io/credo-app/support/"/>
     </url>
     <url>
         <loc>https://Vlad1k3.github.io/credo-app/ru/analytics/all-time/</loc>
