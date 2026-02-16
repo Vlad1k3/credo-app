@@ -11,12 +11,16 @@
       
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../introduction/">
       
       
         <link rel="next" href="../interface/dashboard/">
       
       
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+          <link rel="alternate" href="../ru/getting-started/" hreflang="ru">
         
       
       
@@ -147,6 +151,32 @@
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../ru/getting-started/" hreflang="ru" class="md-select__link">
+              Русский
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
     
       
       
@@ -232,7 +262,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../README.md" class="md-tabs__link">
+        <a href="../introduction/" class="md-tabs__link">
           
   
   
@@ -428,7 +458,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../README.md" class="md-nav__link">
+      <a href="../introduction/" class="md-nav__link">
         
   
   
@@ -461,8 +491,6 @@
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
-      
-        
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
@@ -506,8 +534,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -516,6 +542,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#upload-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upload &amp; Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Upload &amp; Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#supported-file-formats" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -564,8 +602,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#how-to-upload" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -575,8 +613,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#currency-detection" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -586,8 +624,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#deduplication" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -597,8 +635,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#data-storage" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -608,8 +646,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#offline-usage" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -617,6 +655,133 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Загрузка и настройка
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Загрузка и настройка">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Поддерживаемые форматы файлов
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Поддерживаемые форматы файлов">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xlsx-excel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XLSX (Excel) — Рекомендуемый
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdf_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PDF
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csv_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CSV
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Как загрузить файл
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Определение валюты
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Дедупликация
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Хранение данных
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Работа офлайн
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1144,8 +1309,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1154,6 +1317,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#upload-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upload &amp; Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Upload &amp; Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#supported-file-formats" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1202,8 +1377,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#how-to-upload" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1213,8 +1388,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#currency-detection" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1224,8 +1399,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#deduplication" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1235,8 +1410,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#data-storage" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1246,8 +1421,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#offline-usage" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1255,6 +1430,133 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Загрузка и настройка
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Загрузка и настройка">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Поддерживаемые форматы файлов
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Поддерживаемые форматы файлов">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xlsx-excel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        XLSX (Excel) — Рекомендуемый
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdf_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PDF
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csv_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CSV
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Как загрузить файл
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Определение валюты
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Дедупликация
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Хранение данных
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Работа офлайн
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1275,17 +1577,22 @@
 
 
 
-<h1 id="upload-setup">Upload &amp; Setup<a class="headerlink" href="#upload-setup" title="Permanent link">&para;</a></h1>
-<h2 id="supported-file-formats">Supported File Formats<a class="headerlink" href="#supported-file-formats" title="Permanent link">&para;</a></h2>
+  <h1>Upload & Setup</h1>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">English</label><label for="__tabbed_1_2">Русский</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<h2 id="upload-setup">Upload &amp; Setup<a class="headerlink" href="#upload-setup" title="Permanent link">&para;</a></h2>
+<h3 id="supported-file-formats">Supported File Formats<a class="headerlink" href="#supported-file-formats" title="Permanent link">&para;</a></h3>
 <p>Credo Statement Analyzer accepts three file types exported from Credo Bank:</p>
-<h3 id="xlsx-excel-recommended">XLSX (Excel) — Recommended<a class="headerlink" href="#xlsx-excel-recommended" title="Permanent link">&para;</a></h3>
+<h4 id="xlsx-excel-recommended">XLSX (Excel) — Recommended<a class="headerlink" href="#xlsx-excel-recommended" title="Permanent link">&para;</a></h4>
 <p>The richest format. The parser looks for two sheets:</p>
 <ul>
 <li><strong>Account Details</strong> (or "დეტალები") — account holder, account number, currency, opening/closing balance</li>
 <li><strong>Transactions</strong> (or "ტრანზაქცი") — the transaction table</li>
 </ul>
 <p>If these sheet names aren't found, the parser falls back to the last sheet in the workbook.</p>
-<h3 id="pdf">PDF<a class="headerlink" href="#pdf" title="Permanent link">&para;</a></h3>
+<h4 id="pdf">PDF<a class="headerlink" href="#pdf" title="Permanent link">&para;</a></h4>
 <p>Two PDF formats are supported:</p>
 <ol>
 <li><strong>Full Account Statement</strong> — multi-page table with columns: Date, Operation, Debit, Credit, Balance, Description, Beneficiary. Detected by the presence of "Account Statement" or "ამონაწერი" in the header.</li>
@@ -1295,7 +1602,7 @@
 <p class="admonition-title">How PDF parsing works</p>
 <p>The parser uses <code>pdfjs-dist</code> to extract text items with their X/Y positions from each page. It dynamically detects column boundaries from header positions (e.g., "Turnover (DB)", "Balance", "Description") and assigns text items to columns based on their X coordinate. Date entries (<code>DD.MM.YYYY</code> at <code>x &lt; 100</code>) mark row starts.</p>
 </div>
-<h3 id="csv">CSV<a class="headerlink" href="#csv" title="Permanent link">&para;</a></h3>
+<h4 id="csv">CSV<a class="headerlink" href="#csv" title="Permanent link">&para;</a></h4>
 <p>Plain text comma-separated format. The parser:</p>
 <ol>
 <li>Extracts account info from header lines (before the first data row)</li>
@@ -1303,7 +1610,7 @@
 <li>Handles multiline descriptions (lines not starting with a date are appended to the previous row)</li>
 <li>Translates Georgian header keys to English automatically</li>
 </ol>
-<h2 id="how-to-upload">How to Upload<a class="headerlink" href="#how-to-upload" title="Permanent link">&para;</a></h2>
+<h3 id="how-to-upload">How to Upload<a class="headerlink" href="#how-to-upload" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>Drag &amp; Drop</strong> — drag file(s) from your file explorer onto the upload zone</li>
 <li><strong>Click to Browse</strong> — click the upload button and select files</li>
@@ -1317,7 +1624,7 @@
 <li>Mixed formats (some XLSX, some PDF)</li>
 </ul>
 </div>
-<h2 id="currency-detection">Currency Detection<a class="headerlink" href="#currency-detection" title="Permanent link">&para;</a></h2>
+<h3 id="currency-detection">Currency Detection<a class="headerlink" href="#currency-detection" title="Permanent link">&para;</a></h3>
 <p>The app determines each file's currency through this priority chain:</p>
 <ol>
 <li><strong>Account Info sheet</strong> — <code>Account Currency</code> field from XLSX/CSV headers</li>
@@ -1355,12 +1662,12 @@
 </tr>
 </tbody>
 </table>
-<h2 id="deduplication">Deduplication<a class="headerlink" href="#deduplication" title="Permanent link">&para;</a></h2>
+<h3 id="deduplication">Deduplication<a class="headerlink" href="#deduplication" title="Permanent link">&para;</a></h3>
 <p>When adding files to an existing dataset (via the "+ Add Files" button), the app prevents duplicate transactions using a composite key:</p>
 <div class="highlight"><pre><span></span><code>key = date | debit | credit | operation | currency | balance
 </code></pre></div>
 <p>Only transactions whose key doesn't already exist are added. This means you can safely re-upload overlapping files without getting duplicates.</p>
-<h2 id="data-storage">Data Storage<a class="headerlink" href="#data-storage" title="Permanent link">&para;</a></h2>
+<h3 id="data-storage">Data Storage<a class="headerlink" href="#data-storage" title="Permanent link">&para;</a></h3>
 <p>Parsed data is stored in the browser's <code>localStorage</code> under the key <code>credo_statement_data</code>. This means:</p>
 <ul>
 <li>Data persists across page refreshes and browser restarts</li>
@@ -1371,7 +1678,7 @@
 <p class="admonition-title">Storage limits</p>
 <p><code>localStorage</code> has a ~5 MB limit in most browsers. For very large datasets (thousands of transactions across many accounts), you may approach this limit. The app handles quota errors gracefully — if it can't save, it will continue working from memory.</p>
 </div>
-<h2 id="offline-usage">Offline Usage<a class="headerlink" href="#offline-usage" title="Permanent link">&para;</a></h2>
+<h3 id="offline-usage">Offline Usage<a class="headerlink" href="#offline-usage" title="Permanent link">&para;</a></h3>
 <p>After the first page load, the app works fully offline. To verify:</p>
 <ol>
 <li>Open the app and load it once</li>
@@ -1380,6 +1687,116 @@
 <li>The dashboard will load and function normally</li>
 </ol>
 <p>The only feature that requires internet is <strong>exchange rate fetching</strong> for multi-currency accounts (from the NBG API).</p>
+</div>
+<div class="tabbed-block">
+<h2 id="_1">Загрузка и настройка<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">Поддерживаемые форматы файлов<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>Credo Statement Analyzer принимает три типа файлов, экспортированных из Credo Bank:</p>
+<h4 id="xlsx-excel">XLSX (Excel) — Рекомендуемый<a class="headerlink" href="#xlsx-excel" title="Permanent link">&para;</a></h4>
+<p>Наиболее полный формат. Парсер ищет два листа:</p>
+<ul>
+<li><strong>Account Details</strong> (или «დეტალები») — владелец счёта, номер счёта, валюта, начальный/конечный баланс</li>
+<li><strong>Transactions</strong> (или «ტრანზაქცი») — таблица транзакций</li>
+</ul>
+<p>Если эти названия листов не найдены, парсер использует последний лист в книге.</p>
+<h4 id="pdf_1">PDF<a class="headerlink" href="#pdf_1" title="Permanent link">&para;</a></h4>
+<p>Поддерживаются два формата PDF:</p>
+<ol>
+<li><strong>Полная выписка по счёту</strong> — многостраничная таблица со столбцами: Дата, Операция, Дебет, Кредит, Баланс, Описание, Бенефициар. Определяется по наличию «Account Statement» или «ამონაწერი» в заголовке.</li>
+<li><strong>Квитанция платёжного поручения</strong> — квитанция по одной транзакции. Парсер извлекает дату, сумму, детали операции и информацию о получателе/отправителе.</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Как работает парсинг PDF</p>
+<p>Парсер использует <code>pdfjs-dist</code> для извлечения текстовых элементов с их координатами X/Y с каждой страницы. Он динамически определяет границы столбцов по позициям заголовков (например, «Turnover (DB)», «Balance», «Description») и назначает текстовые элементы столбцам на основе их координаты X. Записи с датой (<code>DD.MM.YYYY</code> при <code>x &lt; 100</code>) обозначают начало строки.</p>
+</div>
+<h4 id="csv_1">CSV<a class="headerlink" href="#csv_1" title="Permanent link">&para;</a></h4>
+<p>Текстовый формат с разделителями-запятыми. Парсер:</p>
+<ol>
+<li>Извлекает информацию о счёте из заголовочных строк (до первой строки данных)</li>
+<li>Обрабатывает поля в кавычках со встроенными запятыми (например, <code>"1,220.09"</code>)</li>
+<li>Обрабатывает многострочные описания (строки, не начинающиеся с даты, добавляются к предыдущей строке)</li>
+<li>Автоматически переводит грузинские ключи заголовков на английский</li>
+</ol>
+<h3 id="_3">Как загрузить файл<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Перетаскивание</strong> — перетащите файл(ы) из файлового менеджера в зону загрузки</li>
+<li><strong>Выбор через проводник</strong> — нажмите кнопку загрузки и выберите файлы</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Несколько файлов</p>
+<p>Вы можете загрузить <strong>несколько файлов одновременно</strong>. Приложение автоматически объединяет и дедуплицирует транзакции из разных файлов. Это работает для:</p>
+<ul>
+<li>Нескольких месяцев одного и того же счёта</li>
+<li>Разных счетов (GEL + USD)</li>
+<li>Смешанных форматов (часть XLSX, часть PDF)</li>
+</ul>
+</div>
+<h3 id="_4">Определение валюты<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>Приложение определяет валюту каждого файла по следующей цепочке приоритетов:</p>
+<ol>
+<li><strong>Лист с информацией о счёте</strong> — поле <code>Account Currency</code> из заголовков XLSX/CSV</li>
+<li><strong>Шаблон имени файла</strong> — определяет коды валют в именах файлов, например <code>MYCREDO_GEL_STATEMENT_...</code> или <code>statement_USD.pdf</code></li>
+<li><strong>По умолчанию</strong> — используется <code>GEL</code></li>
+</ol>
+<p>Поддерживаемые шаблоны имён файлов:</p>
+<table>
+<thead>
+<tr>
+<th>Шаблон</th>
+<th>Пример</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>_GEL_</code></td>
+<td><code>MYCREDO_GEL_STATEMENT_2025.xlsx</code></td>
+</tr>
+<tr>
+<td><code>.USD.</code></td>
+<td><code>statement.USD.pdf</code></td>
+</tr>
+<tr>
+<td><code>-EUR-</code></td>
+<td><code>export-EUR-jan.csv</code></td>
+</tr>
+<tr>
+<td><code>GEL.xlsx</code></td>
+<td><code>GEL.xlsx</code></td>
+</tr>
+<tr>
+<td><code>STATEMENT_USD</code></td>
+<td><code>STATEMENT_USD.pdf</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_5">Дедупликация<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>При добавлении файлов к существующему набору данных (через кнопку «+ Add Files») приложение предотвращает дублирование транзакций с помощью составного ключа:</p>
+<div class="highlight"><pre><span></span><code>key = date | debit | credit | operation | currency | balance
+</code></pre></div>
+<p>Добавляются только те транзакции, чей ключ ещё не существует. Это означает, что вы можете безопасно повторно загружать пересекающиеся файлы без появления дубликатов.</p>
+<h3 id="_6">Хранение данных<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>Обработанные данные хранятся в <code>localStorage</code> браузера под ключом <code>credo_statement_data</code>. Это означает:</p>
+<ul>
+<li>Данные сохраняются при обновлении страницы и перезапуске браузера</li>
+<li>Данные привязаны к браузеру и домену (не передаются между устройствами)</li>
+<li>Очистка данных браузера или нажатие «New File» удаляет всё</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Ограничения хранилища</p>
+<p><code>localStorage</code> имеет ограничение ~5 МБ в большинстве браузеров. Для очень больших наборов данных (тысячи транзакций по множеству счетов) вы можете приблизиться к этому лимиту. Приложение корректно обрабатывает ошибки превышения квоты — если сохранение невозможно, оно продолжит работать из памяти.</p>
+</div>
+<h3 id="_7">Работа офлайн<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>После первой загрузки страницы приложение полностью работает офлайн. Чтобы проверить:</p>
+<ol>
+<li>Откройте приложение и загрузите его один раз</li>
+<li>Отключитесь от интернета</li>
+<li>Загрузите банковскую выписку</li>
+<li>Панель управления загрузится и будет работать нормально</li>
+</ol>
+<p>Единственная функция, требующая интернета, — <strong>получение обменных курсов</strong> для мультивалютных счетов (из API НБГ).</p>
+</div>
+</div>
+</div>
 
 
 

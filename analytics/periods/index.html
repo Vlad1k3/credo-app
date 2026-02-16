@@ -18,6 +18,10 @@
       
       
         
+          <link rel="alternate" href="./" hreflang="en">
+        
+          <link rel="alternate" href="../../ru/analytics/periods/" hreflang="ru">
+        
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -147,6 +151,32 @@
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ru/analytics/periods/" hreflang="ru" class="md-select__link">
+              Русский
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
     
       
       
@@ -230,7 +260,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../README.md" class="md-tabs__link">
+        <a href="../../introduction/" class="md-tabs__link">
           
   
   
@@ -425,7 +455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../README.md" class="md-nav__link">
+      <a href="../../introduction/" class="md-nav__link">
         
   
   
@@ -1367,8 +1397,8 @@
 
 <h1 id="time-periods">Time Periods<a class="headerlink" href="#time-periods" title="Permanent link">&para;</a></h1>
 <p>Credo Analytics lets you slice your data into five time perspectives for granular comparisons.</p>
-<h2 id="available-periods">Available Periods<a class="headerlink" href="#available-periods" title="Permanent link">&para;</a></h2>
-<h3 id="year-view">Year View<a class="headerlink" href="#year-view" title="Permanent link">&para;</a></h3>
+<h3 id="available-periods">Available Periods<a class="headerlink" href="#available-periods" title="Permanent link">&para;</a></h3>
+<h4 id="year-view">Year View<a class="headerlink" href="#year-view" title="Permanent link">&para;</a></h4>
 <p>Aggregates one calendar year of transactions.</p>
 <ul>
 <li><strong>Period key format</strong>: <code>YYYY</code> (e.g., <code>2024</code>)</li>
@@ -1376,14 +1406,14 @@
 <li><strong>Chart</strong>: daily income/expense bars within that year</li>
 <li><strong>Navigation</strong>: step through available years with <code>← →</code></li>
 </ul>
-<h3 id="month-view">Month View<a class="headerlink" href="#month-view" title="Permanent link">&para;</a></h3>
+<h4 id="month-view">Month View<a class="headerlink" href="#month-view" title="Permanent link">&para;</a></h4>
 <p>One calendar month.</p>
 <ul>
 <li><strong>Period key format</strong>: <code>YYYY/MM</code> (e.g., <code>2024/07</code>)</li>
 <li><strong>Filter</strong>: all transactions where <code>date.startsWith("2024/07")</code></li>
 <li><strong>Chart</strong>: daily income/expense bars within that month</li>
 </ul>
-<h3 id="week-view">Week View<a class="headerlink" href="#week-view" title="Permanent link">&para;</a></h3>
+<h4 id="week-view">Week View<a class="headerlink" href="#week-view" title="Permanent link">&para;</a></h4>
 <p>Monday through Sunday of one ISO week.</p>
 <ul>
 <li><strong>Period key format</strong>: <code>YYYY/MM/DD</code> (the Monday of that week)</li>
@@ -1391,7 +1421,7 @@
 <li><strong>Week start calculation</strong>: <code>dayOfWeek === 0 ? date - 6 : date - (dayOfWeek - 1)</code> (Monday-based)</li>
 <li><strong>Display format</strong>: <code>"4 Jul — 10 Jul, 2024"</code></li>
 </ul>
-<h3 id="day-view">Day View<a class="headerlink" href="#day-view" title="Permanent link">&para;</a></h3>
+<h4 id="day-view">Day View<a class="headerlink" href="#day-view" title="Permanent link">&para;</a></h4>
 <p>Single day.</p>
 <ul>
 <li><strong>Period key format</strong>: <code>YYYY/MM/DD</code></li>
@@ -1402,7 +1432,7 @@
 <p class="admonition-title">Note</p>
 <p>Day view does not include period comparison (there's no meaningful "previous day" pattern).</p>
 </div>
-<h2 id="period-navigation">Period Navigation<a class="headerlink" href="#period-navigation" title="Permanent link">&para;</a></h2>
+<h3 id="period-navigation">Period Navigation<a class="headerlink" href="#period-navigation" title="Permanent link">&para;</a></h3>
 <p>When any period tab (Year/Month/Week/Day) is active:</p>
 <ol>
 <li>The app computes all available period keys from the transaction data by scanning every transaction date</li>
@@ -1410,7 +1440,7 @@
 <li>A navigation bar shows <code>← Current Period →</code> with the current index</li>
 <li>The center label is clickable — it opens the <strong>Period Picker</strong> overlay</li>
 </ol>
-<h3 id="period-picker">Period Picker<a class="headerlink" href="#period-picker" title="Permanent link">&para;</a></h3>
+<h4 id="period-picker">Period Picker<a class="headerlink" href="#period-picker" title="Permanent link">&para;</a></h4>
 <p>The picker shows a scrollable grid/list of all available periods:</p>
 <ul>
 <li>For <strong>Year/Month/Week</strong>: a grid of clickable period labels</li>
@@ -1418,9 +1448,9 @@
 <li>Click a period to jump to it instantly</li>
 <li>Click outside or press the close button to dismiss</li>
 </ul>
-<h2 id="period-comparison">Period Comparison<a class="headerlink" href="#period-comparison" title="Permanent link">&para;</a></h2>
+<h3 id="period-comparison">Period Comparison<a class="headerlink" href="#period-comparison" title="Permanent link">&para;</a></h3>
 <p>For all period tabs except Day, a <strong>comparison card</strong> shows how the current period compares to the previous one.</p>
-<h3 id="what-is-compared">What is compared<a class="headerlink" href="#what-is-compared" title="Permanent link">&para;</a></h3>
+<h4 id="what-is-compared">What is compared<a class="headerlink" href="#what-is-compared" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -1447,7 +1477,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="percentage-change-formula">Percentage change formula<a class="headerlink" href="#percentage-change-formula" title="Permanent link">&para;</a></h3>
+<h4 id="percentage-change-formula">Percentage change formula<a class="headerlink" href="#percentage-change-formula" title="Permanent link">&para;</a></h4>
 <div class="arithmatex">\[
 \Delta\% = \frac{\text{Current} - \text{Previous}}{|\text{Previous}|} \times 100
 \]</div>
@@ -1456,13 +1486,13 @@
 <div class="arithmatex">\[
 \Delta_{pp} = \text{Current Rate} - \text{Previous Rate}
 \]</div>
-<h3 id="category-changes">Category changes<a class="headerlink" href="#category-changes" title="Permanent link">&para;</a></h3>
+<h4 id="category-changes">Category changes<a class="headerlink" href="#category-changes" title="Permanent link">&para;</a></h4>
 <p>The top 5 categories with the largest absolute spending change between periods are shown:</p>
 <div class="arithmatex">\[
 \Delta_{\text{cat}} = \text{Current Spend}_{\text{cat}} - \text{Previous Spend}_{\text{cat}}
 \]</div>
 <p>Green (↓) means you spent less, red (↑) means you spent more.</p>
-<h2 id="how-previous-period-is-determined">How "Previous Period" Is Determined<a class="headerlink" href="#how-previous-period-is-determined" title="Permanent link">&para;</a></h2>
+<h3 id="how-previous-period-is-determined">How "Previous Period" Is Determined<a class="headerlink" href="#how-previous-period-is-determined" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>

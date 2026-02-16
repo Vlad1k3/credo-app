@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="ru" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -16,13 +16,13 @@
       
       
         
-          <link rel="alternate" href="./" hreflang="en">
+          <link rel="alternate" href="../../../architecture/parsing/" hreflang="en">
         
-          <link rel="alternate" href="../../ru/architecture/parsing/" hreflang="ru">
+          <link rel="alternate" href="./" hreflang="ru">
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,7 +53,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,8 +78,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#parsing-pipeline" class="md-skip">
-          Skip to content
+        <a href="#_1" class="md-skip">
+          Перейти к содержанию
         </a>
       
     </div>
@@ -91,8 +91,8 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Credo Statement Analyzer" class="md-header__button md-logo" aria-label="Credo Statement Analyzer" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../../" title="Credo Statement Analyzer" class="md-header__button md-logo" aria-label="Credo Statement Analyzer" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -152,20 +152,20 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="Select language">
+    <button class="md-header__button md-icon" aria-label="Выберите язык">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
     </button>
     <div class="md-select__inner">
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="./" hreflang="en" class="md-select__link">
+            <a href="../../../architecture/parsing/" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../../ru/architecture/parsing/" hreflang="ru" class="md-select__link">
+            <a href="./" hreflang="ru" class="md-select__link">
               Русский
             </a>
           </li>
@@ -186,16 +186,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="Поиск">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -206,7 +206,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            Инициализация поиска
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -227,7 +227,7 @@
         
           
             
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -237,7 +237,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../" class="md-tabs__link">
         
   
   
@@ -352,9 +352,9 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навигация" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Credo Statement Analyzer" class="md-nav__button md-logo" aria-label="Credo Statement Analyzer" data-md-component="logo">
+    <a href="../../" title="Credo Statement Analyzer" class="md-nav__button md-logo" aria-label="Credo Statement Analyzer" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -372,7 +372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         
   
   
@@ -1021,7 +1021,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
   
   
   
@@ -1030,15 +1030,15 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Содержание
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overview
+        Обзор
       
     </span>
   </a>
@@ -1046,22 +1046,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#xlsx-parser" class="md-nav__link">
+  <a href="#xlsx" class="md-nav__link">
     <span class="md-ellipsis">
       
-        XLSX Parser
+        Парсер XLSX
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="XLSX Parser">
+    <nav class="md-nav" aria-label="Парсер XLSX">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sheet-detection" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Sheet detection
+        Определение листа
       
     </span>
   </a>
@@ -1069,10 +1069,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#conversion-pipeline" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Conversion pipeline
+        Конвейер преобразования
       
     </span>
   </a>
@@ -1080,10 +1080,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#account-info-extraction" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Account info extraction
+        Извлечение информации о счёте
       
     </span>
   </a>
@@ -1096,22 +1096,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pdf-parser" class="md-nav__link">
+  <a href="#pdf" class="md-nav__link">
     <span class="md-ellipsis">
       
-        PDF Parser
+        Парсер PDF
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="PDF Parser">
+    <nav class="md-nav" aria-label="Парсер PDF">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#format-detection" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Format detection
+        Определение формата
       
     </span>
   </a>
@@ -1119,22 +1119,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#full-statement-parsing" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Full statement parsing
+        Парсинг полной выписки
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Full statement parsing">
+    <nav class="md-nav" aria-label="Парсинг полной выписки">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#step-1-extract-text-items" class="md-nav__link">
+  <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: Extract text items
+        Шаг 1: Извлечение текстовых элементов
       
     </span>
   </a>
@@ -1142,10 +1142,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-2-detect-column-boundaries" class="md-nav__link">
+  <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: Detect column boundaries
+        Шаг 2: Определение границ столбцов
       
     </span>
   </a>
@@ -1153,10 +1153,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3-identify-row-starts" class="md-nav__link">
+  <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: Identify row starts
+        Шаг 3: Определение начала строк
       
     </span>
   </a>
@@ -1164,10 +1164,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4-assign-items-to-columns" class="md-nav__link">
+  <a href="#4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: Assign items to columns
+        Шаг 4: Назначение элементов столбцам
       
     </span>
   </a>
@@ -1175,10 +1175,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-5-build-transaction-objects" class="md-nav__link">
+  <a href="#5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 5: Build transaction objects
+        Шаг 5: Построение объектов транзакций
       
     </span>
   </a>
@@ -1191,60 +1191,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#payment-receipt-parsing" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Payment receipt parsing
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#csv-parser" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CSV Parser
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="CSV Parser">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Structure
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parsing-rules" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parsing rules
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#amount-parsing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Amount parsing
+        Парсинг платёжной квитанции
       
     </span>
   </a>
@@ -1257,22 +1207,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#multi-file-merging" class="md-nav__link">
+  <a href="#csv" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Multi-File Merging
+        Парсер CSV
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Multi-File Merging">
+    <nav class="md-nav" aria-label="Парсер CSV">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#adding-files-later" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Adding files later
+        Структура
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Правила парсинга
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Парсинг сумм
       
     </span>
   </a>
@@ -1285,10 +1257,38 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#currency-detection-from-filenames" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Currency Detection from Filenames
+        Объединение нескольких файлов
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Объединение нескольких файлов">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Добавление файлов позже
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Определение валюты из имени файла
       
     </span>
   </a>
@@ -1324,7 +1324,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
   
   
   
@@ -1333,15 +1333,15 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Содержание
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Overview
+        Обзор
       
     </span>
   </a>
@@ -1349,22 +1349,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#xlsx-parser" class="md-nav__link">
+  <a href="#xlsx" class="md-nav__link">
     <span class="md-ellipsis">
       
-        XLSX Parser
+        Парсер XLSX
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="XLSX Parser">
+    <nav class="md-nav" aria-label="Парсер XLSX">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sheet-detection" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Sheet detection
+        Определение листа
       
     </span>
   </a>
@@ -1372,10 +1372,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#conversion-pipeline" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Conversion pipeline
+        Конвейер преобразования
       
     </span>
   </a>
@@ -1383,10 +1383,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#account-info-extraction" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Account info extraction
+        Извлечение информации о счёте
       
     </span>
   </a>
@@ -1399,22 +1399,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pdf-parser" class="md-nav__link">
+  <a href="#pdf" class="md-nav__link">
     <span class="md-ellipsis">
       
-        PDF Parser
+        Парсер PDF
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="PDF Parser">
+    <nav class="md-nav" aria-label="Парсер PDF">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#format-detection" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Format detection
+        Определение формата
       
     </span>
   </a>
@@ -1422,22 +1422,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#full-statement-parsing" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Full statement parsing
+        Парсинг полной выписки
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Full statement parsing">
+    <nav class="md-nav" aria-label="Парсинг полной выписки">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#step-1-extract-text-items" class="md-nav__link">
+  <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 1: Extract text items
+        Шаг 1: Извлечение текстовых элементов
       
     </span>
   </a>
@@ -1445,10 +1445,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-2-detect-column-boundaries" class="md-nav__link">
+  <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: Detect column boundaries
+        Шаг 2: Определение границ столбцов
       
     </span>
   </a>
@@ -1456,10 +1456,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-3-identify-row-starts" class="md-nav__link">
+  <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 3: Identify row starts
+        Шаг 3: Определение начала строк
       
     </span>
   </a>
@@ -1467,10 +1467,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-4-assign-items-to-columns" class="md-nav__link">
+  <a href="#4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 4: Assign items to columns
+        Шаг 4: Назначение элементов столбцам
       
     </span>
   </a>
@@ -1478,10 +1478,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#step-5-build-transaction-objects" class="md-nav__link">
+  <a href="#5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 5: Build transaction objects
+        Шаг 5: Построение объектов транзакций
       
     </span>
   </a>
@@ -1494,60 +1494,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#payment-receipt-parsing" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Payment receipt parsing
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#csv-parser" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CSV Parser
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="CSV Parser">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Structure
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parsing-rules" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Parsing rules
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#amount-parsing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Amount parsing
+        Парсинг платёжной квитанции
       
     </span>
   </a>
@@ -1560,22 +1510,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#multi-file-merging" class="md-nav__link">
+  <a href="#csv" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Multi-File Merging
+        Парсер CSV
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Multi-File Merging">
+    <nav class="md-nav" aria-label="Парсер CSV">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#adding-files-later" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Adding files later
+        Структура
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Правила парсинга
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Парсинг сумм
       
     </span>
   </a>
@@ -1588,10 +1560,38 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#currency-detection-from-filenames" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Currency Detection from Filenames
+        Объединение нескольких файлов
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Объединение нескольких файлов">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Добавление файлов позже
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Определение валюты из имени файла
       
     </span>
   </a>
@@ -1615,9 +1615,9 @@
 
 
 
-<h1 id="parsing-pipeline">Parsing Pipeline<a class="headerlink" href="#parsing-pipeline" title="Permanent link">&para;</a></h1>
-<p>This page documents how Credo Statement Analyzer converts raw bank files into structured transaction objects.</p>
-<h3 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h3>
+<h1 id="_1">Конвейер парсинга<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>На этой странице описано, как Credo Statement Analyzer преобразует исходные банковские файлы в структурированные объекты транзакций.</p>
+<h3 id="_2">Обзор<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>File (.xlsx / .pdf / .csv)
     |
     v
@@ -1636,42 +1636,42 @@ Currency stamping (from accountInfo / filename / default)
     v
 Chronological sort
 </code></pre></div>
-<h3 id="xlsx-parser">XLSX Parser<a class="headerlink" href="#xlsx-parser" title="Permanent link">&para;</a></h3>
-<h4 id="sheet-detection">Sheet detection<a class="headerlink" href="#sheet-detection" title="Permanent link">&para;</a></h4>
-<p>The parser scans all sheet names in the workbook looking for:</p>
+<h3 id="xlsx">Парсер XLSX<a class="headerlink" href="#xlsx" title="Permanent link">&para;</a></h3>
+<h4 id="_3">Определение листа<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<p>Парсер сканирует имена всех листов в рабочей книге и ищет:</p>
 <table>
 <thead>
 <tr>
-<th>Sheet type</th>
-<th>Matched names</th>
+<th>Тип листа</th>
+<th>Совпадающие имена</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Transactions</td>
-<td>Contains <code>"transaction"</code> (EN) or <code>"ტრანზაქცი"</code> (GE)</td>
+<td>Транзакции</td>
+<td>Содержит <code>"transaction"</code> (EN) или <code>"ტრანზაქცი"</code> (GE)</td>
 </tr>
 <tr>
-<td>Account Details</td>
-<td>Contains <code>"account"</code>, <code>"detail"</code> (EN) or <code>"დეტალები"</code> (GE)</td>
+<td>Данные счёта</td>
+<td>Содержит <code>"account"</code>, <code>"detail"</code> (EN) или <code>"დეტალები"</code> (GE)</td>
 </tr>
 </tbody>
 </table>
-<p>If no Transactions sheet is found, the <strong>last sheet</strong> in the workbook is used as fallback.</p>
-<h4 id="conversion-pipeline">Conversion pipeline<a class="headerlink" href="#conversion-pipeline" title="Permanent link">&para;</a></h4>
+<p>Если лист транзакций не найден, в качестве запасного варианта используется <strong>последний лист</strong> рабочей книги.</p>
+<h4 id="_4">Конвейер преобразования<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Read the Excel file as <code>Uint8Array</code> using <code>FileReader</code></li>
-<li>Parse with SheetJS: <code>XLSX.read(data, { type: 'array', cellDates: true })</code></li>
-<li>Convert to CSV string: <code>XLSX.utils.sheet_to_csv(sheet, { dateNF: 'yyyy/mm/dd' })</code></li>
-<li>Parse the CSV string with the internal <code>parseCSV()</code> function</li>
+<li>Чтение файла Excel как <code>Uint8Array</code> с помощью <code>FileReader</code></li>
+<li>Парсинг через SheetJS: <code>XLSX.read(data, { type: 'array', cellDates: true })</code></li>
+<li>Преобразование в строку CSV: <code>XLSX.utils.sheet_to_csv(sheet, { dateNF: 'yyyy/mm/dd' })</code></li>
+<li>Парсинг строки CSV внутренней функцией <code>parseCSV()</code></li>
 </ol>
-<h4 id="account-info-extraction">Account info extraction<a class="headerlink" href="#account-info-extraction" title="Permanent link">&para;</a></h4>
-<p>From the Account Details sheet, key-value pairs are read (column A = key, column B = value). Georgian keys are mapped to English:</p>
+<h4 id="_5">Извлечение информации о счёте<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>Из листа данных счёта считываются пары ключ-значение (столбец A = ключ, столбец B = значение). Грузинские ключи сопоставляются с английскими:</p>
 <table>
 <thead>
 <tr>
-<th>Georgian</th>
-<th>English</th>
+<th>Грузинский</th>
+<th>Английский</th>
 </tr>
 </thead>
 <tbody>
@@ -1705,17 +1705,17 @@ Chronological sort
 </tr>
 </tbody>
 </table>
-<h3 id="pdf-parser">PDF Parser<a class="headerlink" href="#pdf-parser" title="Permanent link">&para;</a></h3>
-<h4 id="format-detection">Format detection<a class="headerlink" href="#format-detection" title="Permanent link">&para;</a></h4>
-<p>The parser reads page 1 text and checks for the presence of <code>"Account Statement"</code> or <code>"ამონაწერი"</code>. This determines whether the file is:</p>
+<h3 id="pdf">Парсер PDF<a class="headerlink" href="#pdf" title="Permanent link">&para;</a></h3>
+<h4 id="_6">Определение формата<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<p>Парсер читает текст страницы 1 и проверяет наличие <code>"Account Statement"</code> или <code>"ამონაწერი"</code>. Это определяет тип файла:</p>
 <ul>
-<li><strong>Full statement</strong> → <code>parsePDFStatement()</code> — multi-page transaction table</li>
-<li><strong>Payment receipt</strong> → <code>parsePDFReceipt()</code> — single transaction document</li>
+<li><strong>Полная выписка</strong> → <code>parsePDFStatement()</code> — многостраничная таблица транзакций</li>
+<li><strong>Платёжная квитанция</strong> → <code>parsePDFReceipt()</code> — документ с одной транзакцией</li>
 </ul>
-<h4 id="full-statement-parsing">Full statement parsing<a class="headerlink" href="#full-statement-parsing" title="Permanent link">&para;</a></h4>
-<p>This is the most complex parser. It reconstructs a table from positioned text items.</p>
-<h5 id="step-1-extract-text-items">Step 1: Extract text items<a class="headerlink" href="#step-1-extract-text-items" title="Permanent link">&para;</a></h5>
-<p>Using <code>pdfjs-dist</code>, each page is processed to extract text items with their position:</p>
+<h4 id="_7">Парсинг полной выписки<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<p>Это самый сложный парсер. Он восстанавливает таблицу из позиционированных текстовых элементов.</p>
+<h5 id="1">Шаг 1: Извлечение текстовых элементов<a class="headerlink" href="#1" title="Permanent link">&para;</a></h5>
+<p>С помощью <code>pdfjs-dist</code> каждая страница обрабатывается для извлечения текстовых элементов с их позицией:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">    </span><span class="nx">str</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;318.58&quot;</span><span class="p">,</span><span class="w">     </span><span class="c1">// the text content</span>
 <span class="w">    </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="mf">245</span><span class="p">,</span><span class="w">            </span><span class="c1">// horizontal position (pixels from left)</span>
@@ -1723,14 +1723,14 @@ Chronological sort
 <span class="w">    </span><span class="nx">page</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="w">            </span><span class="c1">// page number</span>
 <span class="p">}</span>
 </code></pre></div>
-<h5 id="step-2-detect-column-boundaries">Step 2: Detect column boundaries<a class="headerlink" href="#step-2-detect-column-boundaries" title="Permanent link">&para;</a></h5>
-<p>The parser scans page 1 for header text (e.g., "Date", "Turnover (DB)", "Balance") and records their X positions. Column boundaries are set at the midpoint between adjacent headers.</p>
+<h5 id="2">Шаг 2: Определение границ столбцов<a class="headerlink" href="#2" title="Permanent link">&para;</a></h5>
+<p>Парсер сканирует страницу 1 в поисках текста заголовков (например, "Date", "Turnover (DB)", "Balance") и записывает их X-координаты. Границы столбцов устанавливаются посередине между соседними заголовками.</p>
 <table>
 <thead>
 <tr>
-<th>Column</th>
-<th>Left boundary</th>
-<th>Right boundary</th>
+<th>Столбец</th>
+<th>Левая граница</th>
+<th>Правая граница</th>
 </tr>
 </thead>
 <tbody>
@@ -1772,104 +1772,104 @@ Chronological sort
 <tr>
 <td>Beneficiary Account</td>
 <td>mid(BName, BAcc)</td>
-<td>page right edge</td>
+<td>правый край страницы</td>
 </tr>
 </tbody>
 </table>
-<p>If headers aren't found (e.g., Georgian-only statement), default hardcoded boundaries are used.</p>
+<p>Если заголовки не найдены (например, выписка только на грузинском), используются жёстко заданные границы по умолчанию.</p>
 <div class="admonition info">
-<p class="admonition-title">Split header handling</p>
-<p>Some headers span two PDF text items (e.g., <code>"Turnover"</code> + <code>"(DB)"</code> as separate items). The parser handles this by searching for nearby items within 80px horizontal distance on the same Y line.</p>
+<p class="admonition-title">Обработка разделённых заголовков</p>
+<p>Некоторые заголовки состоят из двух текстовых элементов PDF (например, <code>"Turnover"</code> + <code>"(DB)"</code> как отдельные элементы). Парсер обрабатывает это, выполняя поиск ближайших элементов в пределах 80px по горизонтали на той же линии Y.</p>
 </div>
-<h5 id="step-3-identify-row-starts">Step 3: Identify row starts<a class="headerlink" href="#step-3-identify-row-starts" title="Permanent link">&para;</a></h5>
-<p>A row starts wherever a date pattern <code>DD.MM.YYYY</code> appears at x &lt; DATE_MAX. All items between consecutive row starts are assigned to that row.</p>
-<h5 id="step-4-assign-items-to-columns">Step 4: Assign items to columns<a class="headerlink" href="#step-4-assign-items-to-columns" title="Permanent link">&para;</a></h5>
-<p>For each row, items are sorted into columns based on their X position relative to the detected boundaries. Header text items are pre-filtered out.</p>
-<h5 id="step-5-build-transaction-objects">Step 5: Build transaction objects<a class="headerlink" href="#step-5-build-transaction-objects" title="Permanent link">&para;</a></h5>
+<h5 id="3">Шаг 3: Определение начала строк<a class="headerlink" href="#3" title="Permanent link">&para;</a></h5>
+<p>Строка начинается там, где паттерн даты <code>DD.MM.YYYY</code> появляется при x &lt; DATE_MAX. Все элементы между последовательными началами строк назначаются этой строке.</p>
+<h5 id="4">Шаг 4: Назначение элементов столбцам<a class="headerlink" href="#4" title="Permanent link">&para;</a></h5>
+<p>Для каждой строки элементы распределяются по столбцам на основе их X-позиции относительно определённых границ. Текстовые элементы заголовков предварительно отфильтровываются.</p>
+<h5 id="5">Шаг 5: Построение объектов транзакций<a class="headerlink" href="#5" title="Permanent link">&para;</a></h5>
 <ul>
-<li>Date: converted from <code>DD.MM.YYYY</code> to <code>YYYY/MM/DD</code></li>
-<li>Debit/Credit/Balance: extracted using monetary pattern matching (<code>/^\d+\.\d{2}$/</code>)</li>
-<li>Description and beneficiary: joined from all text items in those columns</li>
+<li>Дата: преобразуется из <code>DD.MM.YYYY</code> в <code>YYYY/MM/DD</code></li>
+<li>Дебет/Кредит/Баланс: извлекаются с помощью сопоставления денежных паттернов (<code>/^\d+\.\d{2}$/</code>)</li>
+<li>Описание и получатель: объединяются из всех текстовых элементов соответствующих столбцов</li>
 </ul>
-<h4 id="payment-receipt-parsing">Payment receipt parsing<a class="headerlink" href="#payment-receipt-parsing" title="Permanent link">&para;</a></h4>
-<p>A simpler regex-based parser that extracts:</p>
+<h4 id="_8">Парсинг платёжной квитанции<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<p>Более простой парсер на основе регулярных выражений, который извлекает:</p>
 <ul>
-<li>Operation date: from <code>"Operation Date YYYY-MM-DD"</code> pattern</li>
-<li>Amount: from <code>"Amount: 1,234.56 GEL"</code> pattern</li>
-<li>Details: from <code>"Operation Details: ..."</code> pattern</li>
-<li>Receiver: name and account number from labeled fields</li>
+<li>Дату операции: из паттерна <code>"Operation Date YYYY-MM-DD"</code></li>
+<li>Сумму: из паттерна <code>"Amount: 1,234.56 GEL"</code></li>
+<li>Детали: из паттерна <code>"Operation Details: ..."</code></li>
+<li>Получателя: имя и номер счёта из соответствующих полей</li>
 </ul>
-<p>Receipts always produce a single expense transaction.</p>
-<h3 id="csv-parser">CSV Parser<a class="headerlink" href="#csv-parser" title="Permanent link">&para;</a></h3>
-<h4 id="structure">Structure<a class="headerlink" href="#structure" title="Permanent link">&para;</a></h4>
-<p>Credo Bank CSV files have:</p>
+<p>Квитанции всегда формируют одну расходную транзакцию.</p>
+<h3 id="csv">Парсер CSV<a class="headerlink" href="#csv" title="Permanent link">&para;</a></h3>
+<h4 id="_9">Структура<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<p>CSV-файлы Credo Bank содержат:</p>
 <ol>
-<li><strong>Header section</strong> — key-value pairs (account info) before data rows</li>
-<li><strong>Column header row</strong> — typically <code>Date, Operation, Turnover (DB), Turnover (Cr), Balance, Description, ...</code></li>
-<li><strong>Data rows</strong> — one per transaction</li>
+<li><strong>Секция заголовка</strong> — пары ключ-значение (информация о счёте) перед строками данных</li>
+<li><strong>Строка заголовков столбцов</strong> — обычно <code>Date, Operation, Turnover (DB), Turnover (Cr), Balance, Description, ...</code></li>
+<li><strong>Строки данных</strong> — по одной на транзакцию</li>
 </ol>
-<h4 id="parsing-rules">Parsing rules<a class="headerlink" href="#parsing-rules" title="Permanent link">&para;</a></h4>
+<h4 id="_10">Правила парсинга<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
-<th>Challenge</th>
-<th>Solution</th>
+<th>Проблема</th>
+<th>Решение</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Comma inside numbers</td>
-<td>Quoted fields: <code>"1,220.09"</code> — parser respects quote boundaries</td>
+<td>Запятая внутри чисел</td>
+<td>Поля в кавычках: <code>"1,220.09"</code> — парсер учитывает границы кавычек</td>
 </tr>
 <tr>
-<td>Multiline descriptions</td>
-<td>If a line doesn't start with <code>YYYY/</code>, it's appended to the previous transaction's operation</td>
+<td>Многострочные описания</td>
+<td>Если строка не начинается с <code>YYYY/</code>, она добавляется к операции предыдущей транзакции</td>
 </tr>
 <tr>
-<td>Unclosed quotes</td>
-<td>Lines are joined until quote count is even</td>
+<td>Незакрытые кавычки</td>
+<td>Строки объединяются, пока количество кавычек не станет чётным</td>
 </tr>
 <tr>
-<td>Georgian headers</td>
-<td>Mapped to English via the same key map as XLSX</td>
+<td>Грузинские заголовки</td>
+<td>Сопоставляются с английскими через ту же таблицу ключей, что и для XLSX</td>
 </tr>
 </tbody>
 </table>
-<h4 id="amount-parsing">Amount parsing<a class="headerlink" href="#amount-parsing" title="Permanent link">&para;</a></h4>
-<p>All amounts go through:</p>
+<h4 id="_11">Парсинг сумм<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
+<p>Все суммы проходят через:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">parseAmount</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">cleaned</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">str</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/,/g</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">).</span><span class="nx">trim</span><span class="p">();</span>
 <span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">parseFloat</span><span class="p">(</span><span class="nx">cleaned</span><span class="p">);</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">num</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>This handles: <code>"1,220.09"</code> → <code>1220.09</code>, <code>""</code> → <code>0</code>, <code>"abc"</code> → <code>0</code>.</p>
-<h3 id="multi-file-merging">Multi-File Merging<a class="headerlink" href="#multi-file-merging" title="Permanent link">&para;</a></h3>
-<p>When multiple files are uploaded at once via <code>parseFiles()</code>:</p>
+<p>Обработка: <code>"1,220.09"</code> → <code>1220.09</code>, <code>""</code> → <code>0</code>, <code>"abc"</code> → <code>0</code>.</p>
+<h3 id="_12">Объединение нескольких файлов<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p>При одновременной загрузке нескольких файлов через <code>parseFiles()</code>:</p>
 <ol>
-<li>Each file is parsed independently</li>
-<li>Currency is determined per file (accountInfo &gt; filename &gt; default)</li>
-<li>All transactions are stamped with their currency</li>
-<li>Transactions from all files are concatenated</li>
-<li>The combined array is sorted by date ascending</li>
-<li>All account info objects are collected</li>
+<li>Каждый файл парсится независимо</li>
+<li>Валюта определяется для каждого файла (accountInfo &gt; имя файла &gt; значение по умолчанию)</li>
+<li>Все транзакции помечаются своей валютой</li>
+<li>Транзакции из всех файлов объединяются</li>
+<li>Объединённый массив сортируется по дате по возрастанию</li>
+<li>Все объекты информации о счетах собираются</li>
 </ol>
-<h4 id="adding-files-later">Adding files later<a class="headerlink" href="#adding-files-later" title="Permanent link">&para;</a></h4>
-<p>When using "+ Add Files" from the dashboard, a deduplication step runs:</p>
+<h4 id="_13">Добавление файлов позже<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
+<p>При использовании кнопки "+ Add Files" из панели управления выполняется этап дедупликации:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">makeKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">tx</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span>
 <span class="w">    </span><span class="sb">`</span><span class="si">${</span><span class="nx">tx</span><span class="p">.</span><span class="nx">date</span><span class="si">}</span><span class="sb">|</span><span class="si">${</span><span class="nx">tx</span><span class="p">.</span><span class="nx">debit</span><span class="si">}</span><span class="sb">|</span><span class="si">${</span><span class="nx">tx</span><span class="p">.</span><span class="nx">credit</span><span class="si">}</span><span class="sb">|</span><span class="si">${</span><span class="nx">tx</span><span class="p">.</span><span class="nx">operation</span><span class="si">}</span><span class="sb">|</span><span class="si">${</span><span class="nx">tx</span><span class="p">.</span><span class="nx">currency</span><span class="si">}</span><span class="sb">|</span><span class="si">${</span><span class="nx">tx</span><span class="p">.</span><span class="nx">balance</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
 
 <span class="kd">const</span><span class="w"> </span><span class="nx">existingKeys</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Set</span><span class="p">(</span><span class="nx">existingTransactions</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">makeKey</span><span class="p">));</span>
 <span class="kd">const</span><span class="w"> </span><span class="nx">newTx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">parsedTransactions</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">tx</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="o">!</span><span class="nx">existingKeys</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="nx">makeKey</span><span class="p">(</span><span class="nx">tx</span><span class="p">)));</span>
 </code></pre></div>
-<p>This prevents duplicates when re-uploading files that overlap with existing data.</p>
-<h3 id="currency-detection-from-filenames">Currency Detection from Filenames<a class="headerlink" href="#currency-detection-from-filenames" title="Permanent link">&para;</a></h3>
-<p>If the account info sheet doesn't specify a currency, the parser tries to detect it from the filename:</p>
+<p>Это предотвращает дублирование при повторной загрузке файлов, которые пересекаются с существующими данными.</p>
+<h3 id="_14">Определение валюты из имени файла<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<p>Если лист информации о счёте не указывает валюту, парсер пытается определить её из имени файла:</p>
 <table>
 <thead>
 <tr>
-<th>Pattern</th>
-<th>Regex</th>
+<th>Паттерн</th>
+<th>Регулярное выражение</th>
 </tr>
 </thead>
 <tbody>
@@ -1895,7 +1895,7 @@ Chronological sort
 </tr>
 </tbody>
 </table>
-<p>Supported currencies: GEL, USD, EUR, RUB, GBP.</p>
+<p>Поддерживаемые валюты: GEL, USD, EUR, RUB, GBP.</p>
 
 
 
@@ -1921,7 +1921,7 @@ Chronological sort
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  Back to top
+  К началу
 </button>
         
       </main>
@@ -1953,10 +1953,10 @@ Chronological sort
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

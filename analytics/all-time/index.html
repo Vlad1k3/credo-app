@@ -18,6 +18,10 @@
       
       
         
+          <link rel="alternate" href="./" hreflang="en">
+        
+          <link rel="alternate" href="../../ru/analytics/all-time/" hreflang="ru">
+        
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -147,6 +151,32 @@
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ru/analytics/all-time/" hreflang="ru" class="md-select__link">
+              Русский
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
     
       
       
@@ -230,7 +260,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../README.md" class="md-tabs__link">
+        <a href="../../introduction/" class="md-tabs__link">
           
   
   
@@ -425,7 +455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../README.md" class="md-nav__link">
+      <a href="../../introduction/" class="md-nav__link">
         
   
   
@@ -1243,7 +1273,7 @@
 
 <h1 id="all-time-view">All Time View<a class="headerlink" href="#all-time-view" title="Permanent link">&para;</a></h1>
 <p>The <strong>All Time</strong> tab is the default landing page. It aggregates every loaded transaction to show the complete financial picture.</p>
-<h2 id="summary-cards">Summary Cards<a class="headerlink" href="#summary-cards" title="Permanent link">&para;</a></h2>
+<h3 id="summary-cards">Summary Cards<a class="headerlink" href="#summary-cards" title="Permanent link">&para;</a></h3>
 <p>Six metric cards are displayed at the top:</p>
 <table>
 <thead>
@@ -1290,7 +1320,7 @@
 <p class="admonition-title">Balance reconciliation</p>
 <p>If account info includes a <strong>Closing Balance</strong> (from XLSX/PDF headers), the app uses that as the authoritative balance. If the calculated net differs from the closing balance, a hidden "adjustment" term reconciles them — this accounts for transactions that may fall outside the exported date range.</p>
 </div>
-<h2 id="monthly-bar-chart">Monthly Bar Chart<a class="headerlink" href="#monthly-bar-chart" title="Permanent link">&para;</a></h2>
+<h3 id="monthly-bar-chart">Monthly Bar Chart<a class="headerlink" href="#monthly-bar-chart" title="Permanent link">&para;</a></h3>
 <p>A stacked/grouped bar chart showing <strong>Income</strong> (green) and <strong>Expense</strong> (red) per calendar month.</p>
 <ul>
 <li>X-axis: months (e.g., "Jan", "Feb", ...)</li>
@@ -1298,7 +1328,7 @@
 <li>Hovering shows a tooltip with exact values</li>
 <li>Months are derived by grouping transactions on <code>date.substring(0, 7)</code> (format <code>YYYY/MM</code>)</li>
 </ul>
-<h2 id="balance-timeline">Balance Timeline<a class="headerlink" href="#balance-timeline" title="Permanent link">&para;</a></h2>
+<h3 id="balance-timeline">Balance Timeline<a class="headerlink" href="#balance-timeline" title="Permanent link">&para;</a></h3>
 <p>A line chart showing the <strong>combined account balance</strong> over time.</p>
 <p>How it's built:</p>
 <ol>
@@ -1311,7 +1341,7 @@
 <p class="admonition-title">Multi-account balances</p>
 <p>If you have GEL and USD accounts and are viewing in GEL, each USD balance is converted to GEL at the rate on that specific date before summing.</p>
 </div>
-<h2 id="category-breakdown">Category Breakdown<a class="headerlink" href="#category-breakdown" title="Permanent link">&para;</a></h2>
+<h3 id="category-breakdown">Category Breakdown<a class="headerlink" href="#category-breakdown" title="Permanent link">&para;</a></h3>
 <p>A doughnut chart showing expense distribution across categories, paired with a ranked list.</p>
 <ul>
 <li>Only <strong>debit transactions</strong> (expenses) are included</li>
@@ -1320,14 +1350,14 @@
 <li>Clicking a category in the chart or list filters the transaction table below</li>
 <li>Expanding a category reveals a merchant sub-list sorted by spend</li>
 </ul>
-<h2 id="top-merchants">Top Merchants<a class="headerlink" href="#top-merchants" title="Permanent link">&para;</a></h2>
+<h3 id="top-merchants">Top Merchants<a class="headerlink" href="#top-merchants" title="Permanent link">&para;</a></h3>
 <p>A ranked bar list showing the top 10 merchants by total spend. Merchant names are extracted from the transaction description using pattern matching:</p>
 <ul>
 <li>Card payments: <code>გადახდა - MERCHANT_NAME 18.39 GEL</code> → <code>MERCHANT_NAME</code></li>
 <li>Utility payments: <code>გაზი - სოკარ ჯორჯია</code> → <code>სოკარ ჯორჯია</code></li>
 <li>Fallback: beneficiary name or operation type</li>
 </ul>
-<h2 id="savings-rate-chart">Savings Rate Chart<a class="headerlink" href="#savings-rate-chart" title="Permanent link">&para;</a></h2>
+<h3 id="savings-rate-chart">Savings Rate Chart<a class="headerlink" href="#savings-rate-chart" title="Permanent link">&para;</a></h3>
 <p>A bar chart showing the <strong>monthly savings rate</strong> — the percentage of income that was saved each month.</p>
 <div class="arithmatex">\[
 \text{Savings Rate}_m = \frac{\text{Income}_m - \text{Expense}_m}{\text{Income}_m} \times 100\%
@@ -1338,7 +1368,7 @@
 <li>Below the chart, a scrollable list shows each month's exact rate, income, and expense values</li>
 </ul>
 <p>See <a href="../formulas/#savings-rate">Formulas</a> for the complete formula.</p>
-<h2 id="financial-insights">Financial Insights<a class="headerlink" href="#financial-insights" title="Permanent link">&para;</a></h2>
+<h3 id="financial-insights">Financial Insights<a class="headerlink" href="#financial-insights" title="Permanent link">&para;</a></h3>
 <p>Five analytical cards available only in the All Time view:</p>
 <ol>
 <li><strong>Financial Stability Score</strong> — composite 0–100 score based on income stability, expense stability, and savings consistency</li>
@@ -1348,7 +1378,7 @@
 <li><strong>Living Standard Progress</strong> — comparison of average income, expense, and savings between the first and second halves</li>
 </ol>
 <p>See <a href="../insights/">Financial Insights</a> for detailed formulas and methodology.</p>
-<h2 id="transaction-table">Transaction Table<a class="headerlink" href="#transaction-table" title="Permanent link">&para;</a></h2>
+<h3 id="transaction-table">Transaction Table<a class="headerlink" href="#transaction-table" title="Permanent link">&para;</a></h3>
 <p>A paginated, searchable, sortable table of all transactions with:</p>
 <ul>
 <li><strong>Search</strong> — filters by operation, description, beneficiary name (debounced at 200ms)</li>

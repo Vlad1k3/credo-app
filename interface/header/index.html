@@ -18,6 +18,10 @@
       
       
         
+          <link rel="alternate" href="./" hreflang="en">
+        
+          <link rel="alternate" href="../../ru/interface/header/" hreflang="ru">
+        
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -147,6 +151,32 @@
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ru/interface/header/" hreflang="ru" class="md-select__link">
+              Русский
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
     
       
       
@@ -230,7 +260,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../README.md" class="md-tabs__link">
+        <a href="../../introduction/" class="md-tabs__link">
           
   
   
@@ -425,7 +455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../README.md" class="md-nav__link">
+      <a href="../../introduction/" class="md-nav__link">
         
   
   
@@ -1177,7 +1207,7 @@
 
 <h1 id="header-controls">Header &amp; Controls<a class="headerlink" href="#header-controls" title="Permanent link">&para;</a></h1>
 <p>The header is the control center of the dashboard, providing access to global settings, file management, and data filtering.</p>
-<h2 id="controls">Controls<a class="headerlink" href="#controls" title="Permanent link">&para;</a></h2>
+<h3 id="controls">Controls<a class="headerlink" href="#controls" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -1214,7 +1244,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="account-information">Account Information<a class="headerlink" href="#account-information" title="Permanent link">&para;</a></h2>
+<h3 id="account-information">Account Information<a class="headerlink" href="#account-information" title="Permanent link">&para;</a></h3>
 <p>Below the title, a summary line shows:</p>
 <ul>
 <li><strong>Account Holder</strong> — name from the first uploaded file's account info</li>
@@ -1222,20 +1252,20 @@
 <li><strong>Currencies</strong> — grouped by currency with counts (e.g., "2x GEL + USD")</li>
 </ul>
 <p>Example: <code>JOHN DOE · 3 accounts · 2x GEL + USD</code></p>
-<h2 id="date-range-transaction-count">Date Range &amp; Transaction Count<a class="headerlink" href="#date-range-transaction-count" title="Permanent link">&para;</a></h2>
+<h3 id="date-range-transaction-count">Date Range &amp; Transaction Count<a class="headerlink" href="#date-range-transaction-count" title="Permanent link">&para;</a></h3>
 <p>The second line shows:</p>
 <ul>
 <li><strong>Date Range</strong> — start and end dates of all loaded transactions (format: <code>DD.MM.YYYY</code>)</li>
 <li><strong>Transaction Count</strong> — total number of transactions being analyzed</li>
 </ul>
 <p>Example: <code>01.01.2024 — 31.12.2024 · 1,247 transactions</code></p>
-<h2 id="currency-toggle">Currency Toggle<a class="headerlink" href="#currency-toggle" title="Permanent link">&para;</a></h2>
+<h3 id="currency-toggle">Currency Toggle<a class="headerlink" href="#currency-toggle" title="Permanent link">&para;</a></h3>
 <p>Appears only when multiple account currencies are detected. Click a currency code (e.g., <strong>USD</strong>, <strong>GEL</strong>) to convert all charts, summaries, and totals to that currency using historical exchange rates.</p>
 <div class="admonition info">
 <p class="admonition-title">How conversion works</p>
 <p>When you switch to a non-primary currency, the app fetches historical rates from the National Bank of Georgia for every unique transaction date, then converts each transaction's debit, credit, balance, and amount fields individually. See <a href="../../analytics/exchange-rates/">Exchange Rates</a> for details.</p>
 </div>
-<h2 id="noise-filter">Noise Filter<a class="headerlink" href="#noise-filter" title="Permanent link">&para;</a></h2>
+<h3 id="noise-filter">Noise Filter<a class="headerlink" href="#noise-filter" title="Permanent link">&para;</a></h3>
 <p>When active (default), the noise filter hides two categories of transactions:</p>
 <ol>
 <li><strong>Self Transfers</strong> — money moved between your own Credo accounts (matched by <code>საკუთარ ანგარიშებს</code> pattern)</li>

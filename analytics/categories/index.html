@@ -18,6 +18,10 @@
       
       
         
+          <link rel="alternate" href="./" hreflang="en">
+        
+          <link rel="alternate" href="../../ru/analytics/categories/" hreflang="ru">
+        
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -147,6 +151,32 @@
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ru/analytics/categories/" hreflang="ru" class="md-select__link">
+              Русский
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
     
       
       
@@ -230,7 +260,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../README.md" class="md-tabs__link">
+        <a href="../../introduction/" class="md-tabs__link">
           
   
   
@@ -425,7 +455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../README.md" class="md-nav__link">
+      <a href="../../introduction/" class="md-nav__link">
         
   
   
@@ -1619,17 +1649,17 @@
 
 <h1 id="categories">Categories<a class="headerlink" href="#categories" title="Permanent link">&para;</a></h1>
 <p>Credo Statement Analyzer automatically categorizes expense transactions using a rule-based system of 91 regex patterns.</p>
-<h2 id="how-categorization-works">How Categorization Works<a class="headerlink" href="#how-categorization-works" title="Permanent link">&para;</a></h2>
+<h3 id="how-categorization-works">How Categorization Works<a class="headerlink" href="#how-categorization-works" title="Permanent link">&para;</a></h3>
 <p>For each transaction, the text <code>operation + " " + description</code> is tested against an ordered list of regex rules. The <strong>first matching rule</strong> determines the category.</p>
 <div class="highlight"><pre><span></span><code>Input:  &quot;გადახდა - SPAR 18.39 GEL 31.07.2025&quot;
 Match:  /SPAR/i → Grocery
 Result: { name: &quot;Grocery&quot;, icon: &quot;🛒&quot; }
 </code></pre></div>
 <p>If no rule matches, the transaction is categorized as <strong>Other</strong> (📦).</p>
-<h3 id="performance">Performance<a class="headerlink" href="#performance" title="Permanent link">&para;</a></h3>
+<h4 id="performance">Performance<a class="headerlink" href="#performance" title="Permanent link">&para;</a></h4>
 <p>Categorization results are cached using a <code>WeakMap</code> keyed by the transaction object reference. Since categorization is called multiple times per transaction (in summaries, charts, tables, insights), the cache eliminates redundant regex matching — typically saving 250,000+ regex tests for a dataset of 500 transactions.</p>
-<h2 id="category-list">Category List<a class="headerlink" href="#category-list" title="Permanent link">&para;</a></h2>
-<h3 id="grocery">Grocery (🛒)<a class="headerlink" href="#grocery" title="Permanent link">&para;</a></h3>
+<h3 id="category-list">Category List<a class="headerlink" href="#category-list" title="Permanent link">&para;</a></h3>
+<h4 id="grocery">Grocery (🛒)<a class="headerlink" href="#grocery" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -1688,7 +1718,7 @@ Result: { name: &quot;Grocery&quot;, icon: &quot;🛒&quot; }
 </tr>
 </tbody>
 </table>
-<h3 id="food-delivery">Food Delivery (🍔)<a class="headerlink" href="#food-delivery" title="Permanent link">&para;</a></h3>
+<h4 id="food-delivery">Food Delivery (🍔)<a class="headerlink" href="#food-delivery" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -1711,7 +1741,7 @@ Result: { name: &quot;Grocery&quot;, icon: &quot;🛒&quot; }
 </tr>
 </tbody>
 </table>
-<h3 id="restaurants-cafes">Restaurants &amp; Cafes (🍽)<a class="headerlink" href="#restaurants-cafes" title="Permanent link">&para;</a></h3>
+<h4 id="restaurants-cafes">Restaurants &amp; Cafes (🍽)<a class="headerlink" href="#restaurants-cafes" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -1754,7 +1784,7 @@ Result: { name: &quot;Grocery&quot;, icon: &quot;🛒&quot; }
 </tr>
 </tbody>
 </table>
-<h3 id="pharmacy">Pharmacy (💊)<a class="headerlink" href="#pharmacy" title="Permanent link">&para;</a></h3>
+<h4 id="pharmacy">Pharmacy (💊)<a class="headerlink" href="#pharmacy" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -1781,7 +1811,7 @@ Result: { name: &quot;Grocery&quot;, icon: &quot;🛒&quot; }
 </tr>
 </tbody>
 </table>
-<h3 id="taxi">Taxi (🚕)<a class="headerlink" href="#taxi" title="Permanent link">&para;</a></h3>
+<h4 id="taxi">Taxi (🚕)<a class="headerlink" href="#taxi" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -1808,7 +1838,7 @@ Result: { name: &quot;Grocery&quot;, icon: &quot;🛒&quot; }
 <p class="admonition-title">BOLT disambiguation</p>
 <p>The Taxi rule uses a negative lookahead <code>(?!.*FOOD)</code> to avoid matching "BOLT FOOD" transactions, which should go to the Food Delivery category. Rule order matters — Food Delivery rules are checked before Taxi.</p>
 </div>
-<h3 id="transport">Transport (🚌)<a class="headerlink" href="#transport" title="Permanent link">&para;</a></h3>
+<h4 id="transport">Transport (🚌)<a class="headerlink" href="#transport" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -1835,7 +1865,7 @@ Result: { name: &quot;Grocery&quot;, icon: &quot;🛒&quot; }
 </tr>
 </tbody>
 </table>
-<h3 id="mobile-internet">Mobile &amp; Internet (📱)<a class="headerlink" href="#mobile-internet" title="Permanent link">&para;</a></h3>
+<h4 id="mobile-internet">Mobile &amp; Internet (📱)<a class="headerlink" href="#mobile-internet" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -1858,7 +1888,7 @@ Result: { name: &quot;Grocery&quot;, icon: &quot;🛒&quot; }
 </tr>
 </tbody>
 </table>
-<h3 id="utilities">Utilities (🏠)<a class="headerlink" href="#utilities" title="Permanent link">&para;</a></h3>
+<h4 id="utilities">Utilities (🏠)<a class="headerlink" href="#utilities" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -1885,7 +1915,7 @@ Result: { name: &quot;Grocery&quot;, icon: &quot;🛒&quot; }
 </tr>
 </tbody>
 </table>
-<h3 id="shopping">Shopping (🛍)<a class="headerlink" href="#shopping" title="Permanent link">&para;</a></h3>
+<h4 id="shopping">Shopping (🛍)<a class="headerlink" href="#shopping" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -1912,7 +1942,7 @@ Result: { name: &quot;Grocery&quot;, icon: &quot;🛒&quot; }
 </tr>
 </tbody>
 </table>
-<h3 id="subscriptions">Subscriptions (📺)<a class="headerlink" href="#subscriptions" title="Permanent link">&para;</a></h3>
+<h4 id="subscriptions">Subscriptions (📺)<a class="headerlink" href="#subscriptions" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -1927,7 +1957,7 @@ Result: { name: &quot;Grocery&quot;, icon: &quot;🛒&quot; }
 </tr>
 </tbody>
 </table>
-<h3 id="bank-fees">Bank Fees (🏦)<a class="headerlink" href="#bank-fees" title="Permanent link">&para;</a></h3>
+<h4 id="bank-fees">Bank Fees (🏦)<a class="headerlink" href="#bank-fees" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -1942,7 +1972,7 @@ Result: { name: &quot;Grocery&quot;, icon: &quot;🛒&quot; }
 </tr>
 </tbody>
 </table>
-<h3 id="currency-exchange">Currency Exchange (💱)<a class="headerlink" href="#currency-exchange" title="Permanent link">&para;</a></h3>
+<h4 id="currency-exchange">Currency Exchange (💱)<a class="headerlink" href="#currency-exchange" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -1957,7 +1987,7 @@ Result: { name: &quot;Grocery&quot;, icon: &quot;🛒&quot; }
 </tr>
 </tbody>
 </table>
-<h3 id="self-transfer">Self Transfer (🔄)<a class="headerlink" href="#self-transfer" title="Permanent link">&para;</a></h3>
+<h4 id="self-transfer">Self Transfer (🔄)<a class="headerlink" href="#self-transfer" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -1972,7 +2002,7 @@ Result: { name: &quot;Grocery&quot;, icon: &quot;🛒&quot; }
 </tr>
 </tbody>
 </table>
-<h3 id="transfer-to-others">Transfer to Others (💸)<a class="headerlink" href="#transfer-to-others" title="Permanent link">&para;</a></h3>
+<h4 id="transfer-to-others">Transfer to Others (💸)<a class="headerlink" href="#transfer-to-others" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -1987,7 +2017,7 @@ Result: { name: &quot;Grocery&quot;, icon: &quot;🛒&quot; }
 </tr>
 </tbody>
 </table>
-<h3 id="incoming-transfer">Incoming Transfer (📥)<a class="headerlink" href="#incoming-transfer" title="Permanent link">&para;</a></h3>
+<h4 id="incoming-transfer">Incoming Transfer (📥)<a class="headerlink" href="#incoming-transfer" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -2002,7 +2032,7 @@ Result: { name: &quot;Grocery&quot;, icon: &quot;🛒&quot; }
 </tr>
 </tbody>
 </table>
-<h3 id="deposit">Deposit (📥)<a class="headerlink" href="#deposit" title="Permanent link">&para;</a></h3>
+<h4 id="deposit">Deposit (📥)<a class="headerlink" href="#deposit" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -2021,7 +2051,7 @@ Result: { name: &quot;Grocery&quot;, icon: &quot;🛒&quot; }
 </tr>
 </tbody>
 </table>
-<h3 id="debt-collection">Debt Collection (📋)<a class="headerlink" href="#debt-collection" title="Permanent link">&para;</a></h3>
+<h4 id="debt-collection">Debt Collection (📋)<a class="headerlink" href="#debt-collection" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -2036,7 +2066,7 @@ Result: { name: &quot;Grocery&quot;, icon: &quot;🛒&quot; }
 </tr>
 </tbody>
 </table>
-<h3 id="services">Services (🔧)<a class="headerlink" href="#services" title="Permanent link">&para;</a></h3>
+<h4 id="services">Services (🔧)<a class="headerlink" href="#services" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -2051,16 +2081,16 @@ Result: { name: &quot;Grocery&quot;, icon: &quot;🛒&quot; }
 </tr>
 </tbody>
 </table>
-<h3 id="other">Other (📦)<a class="headerlink" href="#other" title="Permanent link">&para;</a></h3>
+<h4 id="other">Other (📦)<a class="headerlink" href="#other" title="Permanent link">&para;</a></h4>
 <p>Any transaction that doesn't match any of the above rules.</p>
-<h2 id="internal-transfer-detection">Internal Transfer Detection<a class="headerlink" href="#internal-transfer-detection" title="Permanent link">&para;</a></h2>
+<h3 id="internal-transfer-detection">Internal Transfer Detection<a class="headerlink" href="#internal-transfer-detection" title="Permanent link">&para;</a></h3>
 <p>Two categories are treated as "internal transfers" and filtered out when the <strong>Noise Filter</strong> is active:</p>
 <ul>
 <li><strong>Currency Exchange</strong> (💱)</li>
 <li><strong>Self Transfer</strong> (🔄)</li>
 </ul>
 <p>This prevents internal money movements from inflating income and expense totals.</p>
-<h2 id="merchant-name-extraction">Merchant Name Extraction<a class="headerlink" href="#merchant-name-extraction" title="Permanent link">&para;</a></h2>
+<h3 id="merchant-name-extraction">Merchant Name Extraction<a class="headerlink" href="#merchant-name-extraction" title="Permanent link">&para;</a></h3>
 <p>When building category breakdowns and merchant lists, the app extracts a readable merchant name using these patterns (in order):</p>
 <ol>
 <li><strong>Card payment</strong>: <code>გადახდა - MERCHANT_NAME 18.39 GEL</code> → <code>MERCHANT_NAME</code></li>

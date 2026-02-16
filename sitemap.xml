@@ -1,3 +1,213 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>./</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href=""/>
+        <xhtml:link rel="alternate" hreflang="ru" href="ru/"/>
+    </url>
+    <url>
+        <loc>SUMMARY/</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="SUMMARY/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="ru/SUMMARY/"/>
+    </url>
+    <url>
+        <loc>getting-started/</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="getting-started/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="ru/getting-started/"/>
+    </url>
+    <url>
+        <loc>introduction/</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="introduction/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="ru/introduction/"/>
+    </url>
+    <url>
+        <loc>analytics/all-time/</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="analytics/all-time/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="ru/analytics/all-time/"/>
+    </url>
+    <url>
+        <loc>analytics/categories/</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="analytics/categories/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="ru/analytics/categories/"/>
+    </url>
+    <url>
+        <loc>analytics/custom/</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="analytics/custom/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="ru/analytics/custom/"/>
+    </url>
+    <url>
+        <loc>analytics/exchange-rates/</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="analytics/exchange-rates/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="ru/analytics/exchange-rates/"/>
+    </url>
+    <url>
+        <loc>analytics/formulas/</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="analytics/formulas/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="ru/analytics/formulas/"/>
+    </url>
+    <url>
+        <loc>analytics/insights/</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="analytics/insights/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="ru/analytics/insights/"/>
+    </url>
+    <url>
+        <loc>analytics/periods/</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="analytics/periods/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="ru/analytics/periods/"/>
+    </url>
+    <url>
+        <loc>architecture/data-model/</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="architecture/data-model/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="ru/architecture/data-model/"/>
+    </url>
+    <url>
+        <loc>architecture/parsing/</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="architecture/parsing/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="ru/architecture/parsing/"/>
+    </url>
+    <url>
+        <loc>interface/dashboard/</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="interface/dashboard/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="ru/interface/dashboard/"/>
+    </url>
+    <url>
+        <loc>interface/header/</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="interface/header/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="ru/interface/header/"/>
+    </url>
+    <url>
+        <loc>ru/</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="ru/"/>
+        <xhtml:link rel="alternate" hreflang="en" href=""/>
+    </url>
+    <url>
+        <loc>ru/SUMMARY/</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="ru/SUMMARY/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="SUMMARY/"/>
+    </url>
+    <url>
+        <loc>ru/getting-started/</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="ru/getting-started/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="getting-started/"/>
+    </url>
+    <url>
+        <loc>ru/introduction/</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="ru/introduction/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="introduction/"/>
+    </url>
+    <url>
+        <loc>ru/analytics/all-time/</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="ru/analytics/all-time/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="analytics/all-time/"/>
+    </url>
+    <url>
+        <loc>ru/analytics/categories/</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="ru/analytics/categories/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="analytics/categories/"/>
+    </url>
+    <url>
+        <loc>ru/analytics/custom/</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="ru/analytics/custom/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="analytics/custom/"/>
+    </url>
+    <url>
+        <loc>ru/analytics/exchange-rates/</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="ru/analytics/exchange-rates/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="analytics/exchange-rates/"/>
+    </url>
+    <url>
+        <loc>ru/analytics/formulas/</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="ru/analytics/formulas/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="analytics/formulas/"/>
+    </url>
+    <url>
+        <loc>ru/analytics/insights/</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="ru/analytics/insights/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="analytics/insights/"/>
+    </url>
+    <url>
+        <loc>ru/analytics/periods/</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="ru/analytics/periods/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="analytics/periods/"/>
+    </url>
+    <url>
+        <loc>ru/architecture/data-model/</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="ru/architecture/data-model/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="architecture/data-model/"/>
+    </url>
+    <url>
+        <loc>ru/architecture/parsing/</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="ru/architecture/parsing/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="architecture/parsing/"/>
+    </url>
+    <url>
+        <loc>ru/interface/dashboard/</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="ru/interface/dashboard/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="interface/dashboard/"/>
+    </url>
+    <url>
+        <loc>ru/interface/header/</loc>
+        <lastmod>2026-02-16</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="ru/interface/header/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="interface/header/"/>
+    </url>
 </urlset>
