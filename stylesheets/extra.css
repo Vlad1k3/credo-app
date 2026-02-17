@@ -229,6 +229,43 @@
   color: #9ca3af;
 }
 
+/* === Sidebar (GitBook-style) === */
+
+/* Section labels — uppercase, smaller, muted */
+.md-nav--primary .md-nav__item--nested > .md-nav__link {
+  font-weight: 700;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--md-default-fg-color--light);
+  margin-top: 0.8rem;
+}
+
+/* Active page — accent left border + bg tint */
+.md-nav__item .md-nav__link--active {
+  color: var(--md-accent-fg-color);
+  font-weight: 600;
+  background: rgba(79, 70, 229, 0.06);
+  border-radius: 4px;
+  margin-left: -0.4rem;
+  padding-left: 0.8rem;
+  border-left: 3px solid var(--md-accent-fg-color);
+}
+
+[data-md-color-scheme="slate"] .md-nav__item .md-nav__link--active {
+  background: rgba(124, 138, 255, 0.08);
+}
+
+/* Hover on nav items */
+.md-nav__item .md-nav__link:hover {
+  color: var(--md-accent-fg-color);
+}
+
+/* Breadcrumb path styling */
+.md-path {
+  font-size: 0.75rem;
+}
+
 /* === Admonitions (softer) === */
 .md-typeset .admonition,
 .md-typeset details {
@@ -244,7 +281,83 @@
   background: rgba(255, 255, 255, 0.02);
 }
 
-/* === Mobile === */
+/* === Mobile: collapsible full tree (GitBook-style) === */
+@media screen and (max-width: 76.1875em) {
+
+  /* --- Override drill-down: make nested navs inline, not sliding --- */
+  .md-nav--primary .md-nav[data-md-level="1"],
+  .md-nav--primary .md-nav[data-md-level="2"] {
+    position: static !important;
+    transform: none !important;
+    transition: none !important;
+    overflow: hidden !important;
+    pointer-events: auto !important;
+    /* Collapsed by default */
+    opacity: 0;
+    max-height: 0;
+  }
+
+  /* Expanded when toggle checked */
+  .md-nav--primary .md-toggle:checked ~ .md-nav[data-md-level="1"],
+  .md-nav--primary .md-toggle:checked ~ .md-nav[data-md-level="2"] {
+    opacity: 1;
+    max-height: 500px;
+    overflow: visible !important;
+    transition: max-height 0.25s ease, opacity 0.2s ease !important;
+  }
+
+  /* Auto-expand section that contains the active page */
+  .md-nav--primary .md-nav__item--active > .md-toggle ~ .md-nav[data-md-level="1"] {
+    opacity: 1 !important;
+    max-height: 500px !important;
+    overflow: visible !important;
+  }
+
+  /* Hide "back" labels inside nested navs */
+  .md-nav--primary .md-nav[data-md-level="1"] > .md-nav__title,
+  .md-nav--primary .md-nav[data-md-level="2"] > .md-nav__title {
+    display: none !important;
+  }
+
+  /* Section labels: clickable, with chevron */
+  .md-nav--primary > .md-nav__list > .md-nav__item--section > label.md-nav__link {
+    font-weight: 700;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--md-default-fg-color--light);
+    margin-top: 0.8rem;
+    padding-bottom: 0.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Chevron icon: rotate when expanded */
+  .md-nav--primary > .md-nav__list > .md-nav__item--section > label.md-nav__link .md-nav__icon {
+    transform: rotate(0deg);
+    transition: transform 0.2s ease;
+    order: 1;
+    flex-shrink: 0;
+  }
+
+  .md-nav--primary > .md-nav__list > .md-nav__item--section > .md-toggle:checked ~ label.md-nav__link .md-nav__icon {
+    transform: rotate(90deg);
+  }
+
+  /* Indent children inside sections */
+  .md-nav--primary .md-nav[data-md-level="1"] > .md-nav__list {
+    padding-left: 0.75rem;
+  }
+
+  /* Primary nav list: scrollable */
+  .md-nav--primary > .md-nav__list {
+    overflow-y: auto;
+  }
+}
+
+/* === Mobile: layout === */
 @media (max-width: 600px) {
   .hero h1 {
     font-size: 1.6rem;
