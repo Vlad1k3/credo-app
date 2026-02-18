@@ -676,6 +676,56 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#exchange-adjustment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exchange Adjustment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exchange Adjustment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-it-exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why it exists
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formula
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Display rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#monthly-bar-chart" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1116,6 +1166,56 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#exchange-adjustment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exchange Adjustment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exchange Adjustment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-it-exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why it exists
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formula
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Display rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#monthly-bar-chart" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1284,8 +1384,13 @@
 <td>Sum of all debit (outgoing) amounts</td>
 </tr>
 <tr>
+<td><strong>Exchange Adjustment</strong></td>
+<td><span class="arithmatex">\(\text{Closing Balance} - (\text{Income} - \text{Expense})\)</span></td>
+<td>Purple card. Shown only when the difference exceeds 0.05. See <a href="#exchange-adjustment">details below</a></td>
+</tr>
+<tr>
 <td><strong>Net Result</strong></td>
-<td><span class="arithmatex">\(\text{Income} - \text{Expense}\)</span></td>
+<td><span class="arithmatex">\(\text{Income} - \text{Expense} + \text{Adjustment}\)</span></td>
 <td>Overall balance change. Green if positive, red if negative</td>
 </tr>
 <tr>
@@ -1305,9 +1410,44 @@
 </tr>
 </tbody>
 </table>
+<h3 id="exchange-adjustment">Exchange Adjustment<a class="headerlink" href="#exchange-adjustment" title="Permanent link">&para;</a></h3>
+<p>The <strong>Exchange Adjustment</strong> (Russian: <strong>Курсовая разница</strong>) is a purple card that appears between Total Expenses and Net Result. It represents the difference between the bank's authoritative closing balance and the calculated income-minus-expense total.</p>
+<h4 id="why-it-exists">Why it exists<a class="headerlink" href="#why-it-exists" title="Permanent link">&para;</a></h4>
+<p>The simple formula <code>Income − Expense</code> does not always match the real account balance. The adjustment bridges this gap. There are several reasons the gap can occur:</p>
+<ol>
+<li>
+<p><strong>Excluded internal transfers.</strong> When the noise filter is enabled (default), transactions categorized as <em>Currency Exchange</em> or <em>Self Transfer</em> are excluded from analytics. These transactions may carry hidden fees or rate spreads that affect the real balance but are no longer visible in the income/expense totals.</p>
+</li>
+<li>
+<p><strong>Exchange rate fluctuations.</strong> When multiple currencies are involved, all amounts are converted to the display currency using historical NBG rates. The bank's actual conversion rate at the time of a transfer may differ from the official NBG rate, creating a small discrepancy.</p>
+</li>
+<li>
+<p><strong>Transactions outside the statement range.</strong> Bank statements do not always contain the complete history. If the exported period starts after the account was opened or ends before the last transaction, some operations fall outside the analyzer's visibility. The opening/closing balance reported by the bank accounts for these invisible transactions, but the calculated income/expense totals do not.</p>
+</li>
+<li>
+<p><strong>Partial statement exports.</strong> When generating a statement, part of the period may have been omitted. The bank's closing balance still reflects the true account state, but the exported transactions are incomplete, creating a gap.</p>
+</li>
+</ol>
+<h4 id="formula">Formula<a class="headerlink" href="#formula" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[
+\text{Adjustment} = \text{Combined Closing Balance} - (\text{Total Income} - \text{Total Expense})
+\]</div>
+<p>Where:</p>
+<ul>
+<li><strong>Combined Closing Balance</strong> — the sum of each account's closing balance (from XLSX/PDF headers), converted to the display currency using the NBG rate on the last transaction date</li>
+<li><strong>Total Income</strong> and <strong>Total Expense</strong> — calculated from the filtered transaction set (after noise filter and currency conversion)</li>
+</ul>
+<h4 id="display-rules">Display rules<a class="headerlink" href="#display-rules" title="Permanent link">&para;</a></h4>
+<ul>
+<li>The card is <strong>only shown</strong> when <code>|Adjustment| &gt; 0.05</code> (to ignore floating-point rounding noise)</li>
+<li>Positive values are prefixed with <code>+</code>, negative values display with a minus sign</li>
+<li>The card color is <strong>purple</strong> (<code>#8b5cf6</code>), distinct from income (green) and expense (red)</li>
+<li>A tooltip reads: <em>"Compensates for excluded internal transfers and exchange rate fluctuations"</em></li>
+<li>When the adjustment is applied, the <strong>Net Result</strong> card displays the bank's closing balance (the authoritative value), not the raw <code>Income − Expense</code></li>
+</ul>
 <div class="admonition info">
-<p class="admonition-title">Balance reconciliation</p>
-<p>If account info includes a <strong>Closing Balance</strong> (from XLSX/PDF headers), the app uses that as the authoritative balance. If the calculated net differs from the closing balance, a hidden "adjustment" term reconciles them — this accounts for transactions that may fall outside the exported date range.</p>
+<p class="admonition-title">When the card does not appear</p>
+<p>If no account metadata is available (e.g., the statement file lacks header information), the closing balance is unknown, and the adjustment cannot be calculated. In this case, the card is simply not shown.</p>
 </div>
 <h3 id="monthly-bar-chart">Monthly Bar Chart<a class="headerlink" href="#monthly-bar-chart" title="Permanent link">&para;</a></h3>
 <p>A stacked/grouped bar chart showing <strong>Income</strong> (green) and <strong>Expense</strong> (red) per calendar month.</p>
