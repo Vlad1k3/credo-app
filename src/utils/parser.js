@@ -22,13 +22,87 @@ export async function parseFile(file) {
 
 /**
  * Parse a raw CSV file directly (skip XLSX library to avoid re-encoding issues).
+ * Detects our own export format via the CREDO-TOOL-EXPORT marker.
  */
 async function parseCSVFile(file) {
     const text = await file.text();
+
+    if (text.startsWith('# CREDO-TOOL-EXPORT')) {
+        return parseCTExport(text);
+    }
+
     const accountInfo = parseCSVAccountInfo(text);
     const currency = accountInfo?.['Account Currency'] || null;
     const transactions = parseCSV(text, currency);
     return { transactions, csvString: text, accountInfo };
+}
+
+/**
+ * Parse a CSV exported by credo-tool itself (has per-row currency & type).
+ */
+function parseCTExport(text) {
+    const lines = text.split('\n');
+    const accountInfos = [];
+    let headerIdx = -1;
+
+    // Find account info and header row
+    for (let i = 1; i < lines.length; i++) {
+        const line = lines[i].trim();
+        if (!line) continue;
+        if (line.startsWith('Date,Operation,')) {
+            headerIdx = i;
+            break;
+        }
+        // Use parseCSVLine to handle quoted fields (e.g. "1,278.05")
+        const fields = parseCSVLine(line);
+        if (fields.length >= 2) {
+            const key = fields[0].trim();
+            const val = fields[1].trim();
+            if (key === 'Account Holder') {
+                accountInfos.push({ [key]: val });
+            } else if (accountInfos.length > 0) {
+                const last = accountInfos[accountInfos.length - 1];
+                if (key === 'Opening Balance' || key === 'Closing Balance') {
+                    last[key] = parseAmount(val);
+                } else {
+                    last[key] = val;
+                }
+            }
+        }
+    }
+
+    const transactions = [];
+    for (let i = headerIdx + 1; i < lines.length; i++) {
+        const line = lines[i].trim();
+        if (!line) continue;
+        const f = parseCSVLine(line);
+        if (!f[0] || !/^\d{4}\/\d{2}\/\d{2}/.test(f[0])) continue;
+
+        const date = f[0].split(' ')[0];
+        const type = (f[8] || '').trim() || (parseAmount(f[3]) > 0 ? 'income' : 'expense');
+        const currency = (f[10] || '').trim() || 'GEL';
+
+        transactions.push({
+            date,
+            operation: (f[1] || '').trim(),
+            debit: parseAmount(f[2]),
+            credit: parseAmount(f[3]),
+            balance: parseAmount(f[4]),
+            description: (f[5] || '').trim(),
+            beneficiaryName: (f[6] || '').trim(),
+            beneficiaryAccount: (f[7] || '').trim(),
+            type,
+            amount: parseAmount(f[9]) || (type === 'income' ? parseAmount(f[3]) : parseAmount(f[2])),
+            currency,
+        });
+    }
+
+    return {
+        transactions,
+        csvString: text,
+        accountInfo: accountInfos[0] || null,
+        accountInfos,
+    };
 }
 
 /**
@@ -91,7 +165,9 @@ export async function parseFiles(files) {
         }
 
         allTransactions.push(...result.transactions);
-        if (result.accountInfo) {
+        if (result.accountInfos && result.accountInfos.length > 0) {
+            accountInfos.push(...result.accountInfos);
+        } else if (result.accountInfo) {
             accountInfos.push(result.accountInfo);
         }
     }
@@ -99,11 +175,19 @@ export async function parseFiles(files) {
     // Sort by date ascending (oldest first)
     allTransactions.sort((a, b) => a.date.localeCompare(b.date));
 
+    // Deduplicate account infos by Account Number + Currency
+    // (in case the same file is selected twice during initial upload)
+    const infoKey = (info) =>
+        `${info['Account Number'] || ''}|${info['Account Currency'] || ''}`;
+    const infoMap = new Map();
+    for (const info of accountInfos) infoMap.set(infoKey(info), info);
+    const dedupedInfos = [...infoMap.values()];
+
     // Return first accountInfo for backward compat, plus array of all
     return {
         transactions: allTransactions,
-        accountInfo: accountInfos[0] || null,
-        accountInfos,
+        accountInfo: dedupedInfos[0] || null,
+        accountInfos: dedupedInfos,
     };
 }
 
@@ -174,19 +258,23 @@ const DEFAULT_COL = {
 
 // Header strings to filter out of data rows (exact + split variants)
 const HEADER_STRINGS = new Set([
-    'Date', 'თარიღი', 'Operation', 'ოპერაცია',
-    'Turnover (DB)', 'ბრუნვა (დებ)', 'Turnover (Cr)', 'ბრუნვა (კრ)',
-    'Turnover', 'ბრუნვა', '(DB)', '(Cr)', '(დებ)', '(კრ)',
-    'Balance', 'ნაშთი', 'Description', 'დანიშნულება',
-    'Beneficiary Name', 'ბენეფიციარის სახელი',
-    'Beneficiary Account', 'ბენეფიციარის ანგარიში',
-    'Beneficiary', 'ბენეფიციარის',
+    'Date', 'თარიღი', 'Дата',
+    'Operation', 'ოპერაცია', 'операция',
+    'Turnover (DB)', 'ბრუნვა (დებ)', 'оборот (ДБ)',
+    'Turnover (Cr)', 'ბრუნვა (კრ)', 'оборот (КР)',
+    'Turnover', 'ბრუნვა', 'оборот',
+    '(DB)', '(Cr)', '(დებ)', '(კრ)', '(ДБ)', '(КР)',
+    'Balance', 'ნაშთი', 'Баланс',
+    'Description', 'დანიშნულება', 'Описание',
+    'Beneficiary Name', 'ბენეფიციარის სახელი', 'Имя Получателя',
+    'Beneficiary Account', 'ბენეფიციარის ანგარიში', 'Счет получателя',
+    'Beneficiary', 'ბენეფიციარის', 'Получателя',
 ]);
 
-/** Check if item is a header (exact match or truncated Georgian prefix). */
+/** Check if item is a header (exact match or truncated Georgian/Russian prefix). */
 function isHeaderText(str) {
     if (HEADER_STRINGS.has(str)) return true;
-    return ['ბენეფიციარის ანგარ', 'ბენეფიციარის სახელ', 'ბრუნვა (დებ', 'ბრუნვა (კრ']
+    return ['ბენეფიციარის ანგარ', 'ბენეფიციარის სახელ', 'ბრუნვა (დებ', 'ბრუნვა (კრ', 'Счет получат', 'Имя Получат']
         .some(p => str.startsWith(p));
 }
 
@@ -219,45 +307,56 @@ function extractAmount(items) {
  * Handles exact matches, startsWith for truncated Georgian, and split multi-word headers.
  */
 function detectColumnBoundaries(items) {
-    const page1 = items.filter(i => i.page === 1);
+    // Find the first page that contains table headers (not always page 1,
+    // e.g. Russian USD statements have account info on page 1, table starts on page 2)
+    const maxPage = Math.max(...items.map(i => i.page));
+    let headerPage = 1;
+    for (let p = 1; p <= maxPage; p++) {
+        const pageItems = items.filter(i => i.page === p);
+        if (pageItems.some(i => i.str === 'Date' || i.str === 'თარიღი' || i.str === 'Дата')) {
+            headerPage = p;
+            break;
+        }
+    }
+    const page1 = items.filter(i => i.page === headerPage);
     const pos = {};
 
     // Pass 1: exact + startsWith matching
     for (const item of page1) {
         const s = item.str;
-        if (!pos.date && (s === 'Date' || s === 'თარიღი')) pos.date = item.x;
-        if (!pos.operation && (s === 'Operation' || s === 'ოპერაცია')) pos.operation = item.x;
-        if (!pos.debit && (s === 'Turnover (DB)' || s.startsWith('ბრუნვა (დებ'))) pos.debit = item.x;
-        if (!pos.credit && (s === 'Turnover (Cr)' || s.startsWith('ბრუნვა (კრ'))) pos.credit = item.x;
-        if (!pos.balance && (s === 'Balance' || s === 'ნაშთი')) pos.balance = item.x;
-        if (!pos.description && (s === 'Description' || s === 'დანიშნულება')) pos.description = item.x;
-        if (!pos.benefName && (s === 'Beneficiary Name' || s.startsWith('ბენეფიციარის სახელ'))) pos.benefName = item.x;
-        if (!pos.benefAccount && (s === 'Beneficiary Account' || s.startsWith('ბენეფიციარის ანგარ'))) pos.benefAccount = item.x;
+        if (!pos.date && (s === 'Date' || s === 'თარიღი' || s === 'Дата')) pos.date = item.x;
+        if (!pos.operation && (s === 'Operation' || s === 'ოპერაცია' || s === 'операция')) pos.operation = item.x;
+        if (!pos.debit && (s === 'Turnover (DB)' || s.startsWith('ბრუნვა (დებ') || s === 'оборот (ДБ)')) pos.debit = item.x;
+        if (!pos.credit && (s === 'Turnover (Cr)' || s.startsWith('ბრუნვა (კრ') || s === 'оборот (КР)')) pos.credit = item.x;
+        if (!pos.balance && (s === 'Balance' || s === 'ნაშთი' || s === 'Баланс')) pos.balance = item.x;
+        if (!pos.description && (s === 'Description' || s === 'დანიშნულება' || s === 'Описание')) pos.description = item.x;
+        if (!pos.benefName && (s === 'Beneficiary Name' || s.startsWith('ბენეფიციარის სახელ') || s === 'Имя Получателя')) pos.benefName = item.x;
+        if (!pos.benefAccount && (s === 'Beneficiary Account' || s.startsWith('ბენეფიციარის ანგარ') || s === 'Счет получателя')) pos.benefAccount = item.x;
     }
 
     // Pass 2: split multi-word headers ("Turnover" + "(DB)", "Beneficiary" + "Name")
     if (pos.debit === undefined || pos.credit === undefined) {
         for (const item of page1) {
-            if (item.str === 'Turnover' || item.str === 'ბრუნვა') {
+            if (item.str === 'Turnover' || item.str === 'ბრუნვა' || item.str === 'оборот') {
                 const near = page1.find(j =>
                     j !== item && Math.abs(j.y - item.y) < 15 && j.x > item.x && j.x - item.x < 80
                 );
                 if (near) {
-                    if (!pos.debit && (near.str.includes('DB') || near.str.includes('დებ'))) pos.debit = item.x;
-                    if (!pos.credit && (near.str.includes('Cr') || near.str.includes('კრ'))) pos.credit = item.x;
+                    if (!pos.debit && (near.str.includes('DB') || near.str.includes('დებ') || near.str.includes('(ДБ)'))) pos.debit = item.x;
+                    if (!pos.credit && (near.str.includes('Cr') || near.str.includes('კრ') || near.str.includes('(КР)'))) pos.credit = item.x;
                 }
             }
         }
     }
     if (pos.benefName === undefined || pos.benefAccount === undefined) {
         for (const item of page1) {
-            if (item.str === 'Beneficiary' || item.str === 'ბენეფიციარის') {
+            if (item.str === 'Beneficiary' || item.str === 'ბენეფიციარის' || item.str === 'Получателя') {
                 const near = page1.find(j =>
                     j !== item && Math.abs(j.y - item.y) < 15 && j.x > item.x && j.x - item.x < 130
                 );
                 if (near) {
-                    if (!pos.benefName && (near.str.startsWith('Name') || near.str.startsWith('სახელ'))) pos.benefName = item.x;
-                    if (!pos.benefAccount && (near.str.startsWith('Account') || near.str.startsWith('ანგარ'))) pos.benefAccount = item.x;
+                    if (!pos.benefName && (near.str.startsWith('Name') || near.str.startsWith('სახელ') || near.str.startsWith('Имя'))) pos.benefName = item.x;
+                    if (!pos.benefAccount && (near.str.startsWith('Account') || near.str.startsWith('ანგარ') || near.str.startsWith('Счет'))) pos.benefAccount = item.x;
                 }
             }
         }
@@ -386,17 +485,34 @@ function extractStatementAccountInfo(text) {
     const t = text.replace(/\u00AD/g, '').replace(/\s+/g, ' ');
     const info = {};
 
-    const holderMatch = t.match(/Account\s+Holder\s+([A-Z\s]+?)(?:\s+საიდენტიფიკაციო|\s+\d)/);
-    if (holderMatch) info['Account Holder'] = holderMatch[1].trim();
+    // Account Holder
+    const holderMatch = t.match(/Account\s+Holder\s+([^\d]+?)(?:\s+საიდენტიფიკაციო|\s+Identification|\s+Владелец|\s+\d{9})/i)
+        || t.match(/Владелец\s+счета\s+([^\d]+?)(?:\s+Идентификационный|\s+\d{9})/i);
+    if (holderMatch) {
+        let name = holderMatch[1].replace(/[:|-]/g, '').trim();
+        name = name.replace(/Account\s+Holder|Владелец\s+счета/gi, '').trim();
+        info['Account Holder'] = name;
+    }
 
-    const accountMatch = t.match(/Account\s+Number\s+(GE\w+)/);
+    // Account Number
+    const accountMatch = t.match(/(?:Account\s+Number|номер\s+счета)\s+(GE[A-Z0-9]{20})/i) || t.match(/(GE[A-Z0-9]{20})/i);
     if (accountMatch) info['Account Number'] = accountMatch[1].trim();
 
-    const currencyMatch = t.match(/Account\s+Currency\s+(\w+)/);
+    // Account Currency
+    const currencyMatch = t.match(/(?:Account\s+Currency|валюта)\s+([A-Z]{3})/i);
     if (currencyMatch) info['Account Currency'] = currencyMatch[1].trim();
 
-    const periodMatch = t.match(/Statement\s+Period\s+([\d.]+\s*-\s*[\d.]+)/);
+    // Period
+    const periodMatch = t.match(/(?:Statement\s+Period|отчетный\s+период)\s+([\d.]+\s*-\s*[\d.]+)/i);
     if (periodMatch) info['Statement Period'] = periodMatch[1].trim();
+
+    // Opening Balance
+    const openingMatch = t.match(/(?:Opening\s+Balance|საწყისი\s+ნაშთი|Начальный\s+баланс)[:\s]+([\d,]+\.?\d*)/i);
+    if (openingMatch) info['Opening Balance'] = openingMatch[1].trim();
+
+    // Closing Balance
+    const closingMatch = t.match(/(?:Closing\s+Balance|საბოლოო\s+ნაშთი|Окончательный\s+баланс)[:\s]+([\d,]+\.?\d*)/i);
+    if (closingMatch) info['Closing Balance'] = closingMatch[1].trim();
 
     return Object.keys(info).length > 0 ? info : null;
 }

@@ -1,7 +1,12 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { useSettings } from '../SettingsContext';
 
 export default function PeriodPicker({ mode, availableKeys, selectedKey, onSelect, customRange, onCustomRange, onClose }) {
+    useEffect(() => {
+        document.body.style.overflow = 'hidden';
+        return () => { document.body.style.overflow = ''; };
+    }, []);
+
     const availSet = useMemo(() => new Set(availableKeys || []), [availableKeys]);
     const { t } = useSettings();
 

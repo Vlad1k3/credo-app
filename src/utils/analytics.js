@@ -6,6 +6,17 @@
 const _catCache = new WeakMap();
 
 const CATEGORY_RULES = [
+    // Exported category markers (for re-importing anonymized CSV)
+    { pattern: /\[Grocery\]/i, category: 'Grocery', icon: '🛒' },
+    { pattern: /\[Restaurants & Cafes\]/i, category: 'Restaurants & Cafes', icon: '🍽' },
+    { pattern: /\[Pharmacy\]/i, category: 'Pharmacy', icon: '💊' },
+    { pattern: /\[Taxi\]/i, category: 'Taxi', icon: '🚕' },
+    { pattern: /\[Transport\]/i, category: 'Transport', icon: '🚌' },
+    { pattern: /\[Mobile & Internet\]/i, category: 'Mobile & Internet', icon: '📱' },
+    { pattern: /\[Utilities\]/i, category: 'Utilities', icon: '🏠' },
+    { pattern: /\[Shopping\]/i, category: 'Shopping', icon: '🛍' },
+    { pattern: /\[Subscriptions\]/i, category: 'Subscriptions', icon: '📺' },
+
     // Grocery stores
     { pattern: /SPAR/i, category: 'Grocery', icon: '🛒' },
     { pattern: /DAILY|DEILY/i, category: 'Grocery', icon: '🛒' },
@@ -24,6 +35,7 @@ const CATEGORY_RULES = [
     { pattern: /WOLT/i, category: 'Food Delivery', icon: '🍔' },
     { pattern: /BOLT FOOD|BOLT\.EU.*FOOD/i, category: 'Food Delivery', icon: '🍔' },
     { pattern: /GLOVO/i, category: 'Food Delivery', icon: '🍔' },
+    { pattern: /\[Food Delivery\]/i, category: 'Food Delivery', icon: '🍔' },
 
     // Restaurants & Cafes
     { pattern: /TAKARA/i, category: 'Restaurants & Cafes', icon: '🍽' },
@@ -71,25 +83,25 @@ const CATEGORY_RULES = [
     { pattern: /NETFLIX|SPOTIFY|YOUTUBE|GOOGLE|APPLE/i, category: 'Subscriptions', icon: '📺' },
 
     // Bank fees
-    { pattern: /საკომისიო|Cross Border Fee/i, category: 'Bank Fees', icon: '🏦' },
+    { pattern: /საკომისიო|Cross Border Fee|\[Bank Fees\]/i, category: 'Bank Fees', icon: '🏦' },
 
     // Currency exchange
-    { pattern: /კონვერტაცია|Exchange|Конвертация|Обмен/i, category: 'Currency Exchange', icon: '💱' },
+    { pattern: /კონვერტაცია|Exchange|Конвертация|Обмен|\[Currency Exchange\]/i, category: 'Currency Exchange', icon: '💱' },
 
     // Transfers
-    { pattern: /საკუთარ ანგარიშებს/i, category: 'Self Transfer', icon: '🔄' },
-    { pattern: /გადარიცხვა.*კლიენტებს|თანხის გადარიცხვა/i, category: 'Transfer to Others', icon: '💸' },
-    { pattern: /სხვა ბანკიდან|Private transfers/i, category: 'Incoming Transfer', icon: '📥' },
+    { pattern: /საკუთარ ანგარიშებს|\[Self Transfer\]/i, category: 'Self Transfer', icon: '🔄' },
+    { pattern: /გადარიცხვა.*კლიენტებს|თანხის გადარიცხვა|\[Transfer to Others\]/i, category: 'Transfer to Others', icon: '💸' },
+    { pattern: /სხვა ბანკიდან|Private transfers|\[Incoming Transfer\]/i, category: 'Incoming Transfer', icon: '📥' },
 
     // Deposits
-    { pattern: /შეტანა|ჩარიცხვა/i, category: 'Deposit', icon: '📥' },
+    { pattern: /შეტანა|ჩარიცხვა|\[Deposit\]/i, category: 'Deposit', icon: '📥' },
     { pattern: /ბარათზე.*ჩარიცხვა/i, category: 'Deposit', icon: '📥' },
 
     // Debt
-    { pattern: /დავალიანების.*მოგროვება/i, category: 'Debt Collection', icon: '📋' },
+    { pattern: /დავალიანების.*მოგროვება|\[Debt Collection\]/i, category: 'Debt Collection', icon: '📋' },
 
     // Personal services
-    { pattern: /P\/E\s|ი\/მ\s/i, category: 'Services', icon: '🔧' },
+    { pattern: /P\/E\s|ი\/მ\s|\[Services\]/i, category: 'Services', icon: '🔧' },
 ];
 
 export function categorize(transaction) {

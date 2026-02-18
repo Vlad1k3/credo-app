@@ -1,26 +1,100 @@
-# Main Dashboard
+# Dashboard Overview
 
-The dashboard is designed to give you both a high-level overview and deep insights into your finances.
+The dashboard is the main interface after uploading files. It provides both high-level overviews and deep drill-downs into your financial data.
 
-## Structure
+### Layout Structure
 
-The interface is divided into key sections:
+```
++----------------------------------------------+
+|  Header (controls, account info, date range)  |
++----------------------------------------------+
+|  Tab Bar: All | Year | Month | Week | Day | Custom  |
++----------------------------------------------+
+|  Period Navigation (← current period →)       |
++----------------------------------------------+
+|                                              |
+|  Tab Content                                 |
+|  - Summary cards                             |
+|  - Charts (bar, line)                        |
+|  - Category breakdown (doughnut + list)       |
+|  - Period comparison                         |
+|  - Financial insights (All Time only)         |
+|  - Transaction table                         |
+|                                              |
++----------------------------------------------+
+|  Footer (privacy note)                       |
++----------------------------------------------+
+```
 
-1. **Header**: Global controls and file management.
-2. **Account Information**: Located just below the title, this shows the account holder name and a summary of loaded accounts (e.g., "3 accounts · 2× GEL + USD").
-3. **Period Navigation**: Tabs to switch between **All Time**, **Year**, **Month**, **Week**, **Day**, and **Custom**.
-4. **Summary & Charts**: The main content area, which updates based on the selected period.
+### Tab System
 
-## Mobile Experience
+The dashboard has 6 tabs, each providing a different time perspective:
 
-Unlike traditional banking apps that often feel cramped, Credo Analytics is optimized for mobile devices.
+| Tab | Shows | Navigation |
+|-----|-------|-----------|
+| **All Time** | Entire loaded dataset | No period nav |
+| **Year** | One calendar year | `← 2023` / `2024 →` |
+| **Month** | One calendar month | `← January` / `February →` |
+| **Week** | Monday–Sunday | `← Week 4` / `Week 5 →` |
+| **Day** | Single day | `← 14 Jan` / `15 Jan →` |
+| **Custom** | User-defined range | Date picker |
 
-* **Stacking**: On smaller screens, the layout automatically adjusts. Side-by-side elements like charts and lists stack vertically for easier reading.
-* **Touch-Friendly**: Buttons and interactive elements are sized for touch targets.
-* **Collapsible Sections**: In lists (like Category Breakdown), details are hidden by default to save space but can be expanded with a tap.
+Switching tabs triggers a fade-slide animation on the content area. The `key={activeTab}` prop on the content wrapper re-mounts the view on each tab change.
 
-## Currency Handling
+### All Time Tab
 
-If your uploaded files contain multiple currencies (e.g., GEL and USD transactions), a **Currency Toggle** will appear in the top right.
-* Click a currency code (e.g., **USD**) to convert all charts and totals to that currency.
-* The application uses historical exchange rates to provide accurate conversions at the time of each transaction.
+Displays the complete financial picture. Includes:
+
+- **Summary cards** — income, expense, net, average daily/monthly, current balance
+- **Monthly bar chart** — income vs. expense per month
+- **Balance timeline** — line chart of combined account balance over time
+- **Category breakdown** — doughnut chart + ranked list of expense categories
+- **Top merchants** — ranked list of highest-spend merchants
+- **Savings rate chart** — monthly savings as percentage of income
+- **Financial insights** — stability score, vampire expenses, day patterns, category trends, living standard
+
+See [All Time View](../analytics/all-time.md) for details.
+
+### Period Tabs (Year / Month / Week / Day)
+
+All period tabs share the same layout:
+
+- **Summary cards** — income, expense, net, transaction count for that period
+- **Bar chart** — daily breakdown within the period
+- **Category breakdown** — expense categories for that period only
+- **Period comparison** — compares metrics against the previous period
+- **Transaction table** — filtered to the selected period
+
+See [Time Periods](../analytics/periods.md) for details.
+
+### Period Navigation
+
+When a period tab is active, a navigation bar appears:
+
+- **Left Arrow (←)** — go to the previous period
+- **Center Label** — shows the current period name. Click to open the **Period Picker** (calendar/list selector)
+- **Right Arrow (→)** — go to the next period
+
+The arrows are disabled at the boundaries (first/last available period).
+
+### Mobile Experience
+
+On screens narrower than 768px:
+
+- **Stacking** — side-by-side elements (chart + list) stack vertically
+- **Touch targets** — all interactive elements have a minimum 44px touch area
+- **Collapsible sections** — category lists and insight cards collapse to headers with tap-to-expand
+- **Simplified charts** — tooltips and hover effects are disabled on touch devices to prevent interference with scrolling
+- **Mobile transaction list** — the desktop table is replaced with a compact card-based list
+
+### Currency Handling
+
+If uploaded files contain multiple currencies (e.g., GEL and USD accounts):
+
+1. A **Currency Toggle** appears in the header
+2. The app defaults to the primary account currency (first uploaded account)
+3. Clicking another currency converts all values using historical NBG exchange rates
+4. Each transaction is converted individually using the rate on its specific date
+5. Closing balances from account info are also converted for the combined balance
+
+See [Exchange Rates](../analytics/exchange-rates.md) for the conversion algorithm.

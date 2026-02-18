@@ -1,0 +1,128 @@
+site_name: Credo Statement Analyzer
+site_description: Privacy-first financial analytics for Credo Bank statements
+site_url: https://Vlad1k3.github.io/credo-app/
+repo_url: https://github.com/Vlad1k3/credo-app
+repo_name: Vlad1k3/credo-app
+
+theme:
+  name: material
+  icon:
+    logo: material/chart-bar
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - navigation.sections
+    - navigation.path
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - header.autohide
+    - content.code.copy
+    - content.tabs.link
+    - content.tooltips
+    - toc.follow
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Introduction: introduction.md
+      - Upload & Setup: getting-started.md
+  - Interface:
+      - Dashboard Overview: interface/dashboard.md
+      - Header & Controls: interface/header.md
+  - Analytics:
+      - All Time View: analytics/all-time.md
+      - Time Periods: analytics/periods.md
+      - Custom Range: analytics/custom.md
+      - Financial Insights: analytics/insights.md
+      - Categories: analytics/categories.md
+      - Exchange Rates: analytics/exchange-rates.md
+  - Reference:
+      - Formulas & Calculations: analytics/formulas.md
+      - Data Model: architecture/data-model.md
+      - Parsing Pipeline: architecture/parsing.md
+  - Support Developer: support.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Vlad1k3/credo-app
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/deboshir
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/ssofiXDD
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: folder
+      languages:
+        - locale: en
+          default: true
+          name: English
+        - locale: ru
+          name: Русский
+          nav_translations:
+            Home: Главная
+            Getting Started: Начало работы
+            Introduction: Введение
+            "Upload & Setup": Загрузка и настройка
+            Interface: Интерфейс
+            Dashboard Overview: Обзор панели
+            "Header & Controls": Заголовок и управление
+            Analytics: Аналитика
+            All Time View: За всё время
+            Time Periods: Периоды
+            Custom Range: Произвольный период
+            Financial Insights: Финансовые инсайты
+            Categories: Категории
+            Exchange Rates: Обменные курсы
+            Reference: Справочник
+            "Formulas & Calculations": Формулы и расчёты
+            Data Model: Модель данных
+            Parsing Pipeline: Конвейер парсинга
+            Support Developer: Поддержать разработчика

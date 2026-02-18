@@ -10,10 +10,11 @@ import {
 import { parseFiles } from '../utils/parser';
 import { fetchRatesForDates, convertTransactions, convertAmount, getUniqueDates } from '../utils/rates';
 import { useSettings } from '../SettingsContext';
+import ReportModal from './ReportModal';
 
 const TAB_IDS = ['all', 'year', 'month', 'week', 'day', 'custom'];
 
-export default function Dashboard({ transactions, accountInfos = [], onClear, onUpdateData }) {
+export default function Dashboard({ transactions, accountInfos = [], onClear, onUpdateData, showToast }) {
     const [activeTab, setActiveTab] = useState('all');
     const [periodIndex, setPeriodIndex] = useState({});
     const [showPicker, setShowPicker] = useState(false);
@@ -23,6 +24,7 @@ export default function Dashboard({ transactions, accountInfos = [], onClear, on
     const [ratesLoading, setRatesLoading] = useState(false);
     const [ratesLoaded, setRatesLoaded] = useState(false);
     const [noiseFilter, setNoiseFilter] = useState(true);
+    const [showReport, setShowReport] = useState(false);
     const addFileRef = useRef(null);
     const { t, theme } = useSettings();
 
@@ -237,8 +239,14 @@ export default function Dashboard({ transactions, accountInfos = [], onClear, on
 
             const merged = [...transactions, ...newTx].sort((a, b) => a.date.localeCompare(b.date));
 
-            // Keep all account infos (one per file) so every file's Closing Balance is summed
-            let uniqueInfos = [...accountInfos, ...(result.accountInfos || [])];
+            // Deduplicate account infos by Account Number + Currency.
+            // When the same file is re-uploaded, keep the newer entry (from result) so Closing Balance isn't doubled.
+            const infoKey = (info) =>
+                `${info['Account Number'] || ''}|${info['Account Currency'] || ''}`;
+            const infoMap = new Map();
+            for (const info of accountInfos) infoMap.set(infoKey(info), info);
+            for (const info of (result.accountInfos || [])) infoMap.set(infoKey(info), info);
+            let uniqueInfos = [...infoMap.values()];
 
             // Ensure every currency present in merged transactions has an account entry
             // (handles added files whose parser didn't return accountInfo).
@@ -313,6 +321,36 @@ export default function Dashboard({ transactions, accountInfos = [], onClear, on
                     </p>
                 </div>
                 <div className="dash-header-right">
+                    <button
+                        className="btn-report"
+                        onClick={() => setShowReport(true)}
+                        title={t('report.tooltip')}
+                    >
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
+                            <line x1="4" y1="22" x2="4" y2="15" />
+                        </svg>
+                        {t('report.button')}
+                    </button>
+                    <a
+                        href="https://Vlad1k3.github.io/credo-app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="upload-btn"
+                        style={{
+                            textDecoration: 'none',
+                            fontSize: '0.85rem',
+                            padding: '0.4rem 0.8rem',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '0.4rem',
+                            background: 'var(--bg-hover)',
+                            color: 'var(--text)',
+                            border: '1px solid var(--border)'
+                        }}
+                    >
+                        <span>📚</span> Docs
+                    </a>
                     {hasMultipleAccounts && (
                         <div className="currency-toggle">
                             {accountCurrencies.map(c => (
@@ -429,6 +467,15 @@ export default function Dashboard({ transactions, accountInfos = [], onClear, on
                     {t('dash.privacy')}
                 </span>
             </footer>
+
+            {showReport && (
+                <ReportModal
+                    transactions={transactions}
+                    accountInfos={accountInfos}
+                    onClose={() => setShowReport(false)}
+                    showToast={showToast}
+                />
+            )}
         </div>
     );
 }

@@ -11,6 +11,7 @@ export default defineConfig({
           chart: ['chart.js', 'react-chartjs-2'],
           xlsx: ['xlsx'],
           pdf: ['pdfjs-dist'],
+          firebase: ['firebase/app', 'firebase/firestore'],
         },
       },
     },

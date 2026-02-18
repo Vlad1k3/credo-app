@@ -1,4 +1,5 @@
-import { useState, useMemo, useRef } from 'react';
+import { useState, useMemo, useRef, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { Bar, Line } from 'react-chartjs-2';
 import '../utils/chartSetup';
 import { aggregateByMonth, calculateSummary, getCategoryBreakdown, getBalanceTimeline, getTopMerchants } from '../utils/analytics';
@@ -161,14 +162,75 @@ export default function AllTimeView({ transactions, summary, currency = '₾' })
 }
 
 function SummaryCard({ label, value, color, prefix = '', currency = '₾', tooltip }) {
+    const [showTooltip, setShowTooltip] = useState(false);
+    const iconRef = useRef(null);
+    const touchStart = useRef(null);
+    const timerRef = useRef(null);
+    const [position, setPosition] = useState({ top: 0, left: 0 });
+
+    const close = () => {
+        setShowTooltip(false);
+        if (timerRef.current) { clearTimeout(timerRef.current); timerRef.current = null; }
+    };
+
+    const openTooltip = () => {
+        if (iconRef.current) {
+            const rect = iconRef.current.getBoundingClientRect();
+            setPosition({ top: rect.top, left: rect.left + rect.width / 2 });
+        }
+        setShowTooltip(true);
+        if (timerRef.current) clearTimeout(timerRef.current);
+        timerRef.current = setTimeout(close, 4000);
+    };
+
+    useEffect(() => () => { if (timerRef.current) clearTimeout(timerRef.current); }, []);
+
+    const handleTouchStart = (e) => {
+        const t = e.touches[0];
+        touchStart.current = { x: t.clientX, y: t.clientY };
+    };
+
+    const handleTouchEnd = (e) => {
+        if (!touchStart.current) return;
+        const t = e.changedTouches[0];
+        const dx = Math.abs(t.clientX - touchStart.current.x);
+        const dy = Math.abs(t.clientY - touchStart.current.y);
+        touchStart.current = null;
+        if (dx < 10 && dy < 10) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (showTooltip) { close(); } else { openTooltip(); }
+        }
+    };
+
     return (
         <div className="s-card">
             <div className="s-card-label">
                 {label}
                 {tooltip && (
-                    <div className="info-icon-wrapper" tabIndex={0} role="button" aria-label={tooltip}>
+                    <div
+                        className="info-icon-wrapper"
+                        ref={iconRef}
+                        onMouseEnter={openTooltip}
+                        onMouseLeave={close}
+                        onTouchStart={handleTouchStart}
+                        onTouchEnd={handleTouchEnd}
+                        tabIndex={0}
+                        role="button"
+                        aria-label={tooltip}
+                    >
                         <span className="info-icon">i</span>
-                        <div className="custom-tooltip">{tooltip}</div>
+                        {showTooltip && createPortal(
+                            <div className="tooltip-overlay" onClick={close} onTouchEnd={(e) => { e.preventDefault(); close(); }}>
+                                <div
+                                    className="portal-tooltip"
+                                    style={{ top: position.top, left: position.left }}
+                                >
+                                    {tooltip}
+                                </div>
+                            </div>,
+                            document.body
+                        )}
                     </div>
                 )}
             </div>

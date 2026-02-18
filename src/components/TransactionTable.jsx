@@ -199,6 +199,11 @@ export default function TransactionTable({ transactions, currency = '₾', filte
 }
 
 function TxDetailModal({ tx, currency, fmtDate, t, onClose }) {
+    useEffect(() => {
+        document.body.style.overflow = 'hidden';
+        return () => { document.body.style.overflow = ''; };
+    }, []);
+
     const cat = categorize(tx);
     return (
         <div className="tx-modal-overlay" onClick={onClose}>
